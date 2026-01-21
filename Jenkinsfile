@@ -81,7 +81,7 @@ PipelineDockerEntryV3([
             --build-arg RUNNING_IN_DOCKER=true \
             --build-arg NODE_ENV=${NODE_ENV} \
             --build-arg VITE_GITHUB_ACCESS_TOKEN=${VITE_GITHUB_ACCESS_TOKEN} \
-            --build-arg VITE_GITHUB_TOKEN_TYPE=${VITE_GITHUB_TOKEN_TYPE}
+            --build-arg VITE_GITHUB_TOKEN_TYPE=${VITE_GITHUB_TOKEN_TYPE} \
             --build-arg VITE_LOG_LEVEL=${VITE_LOG_LEVEL} \
             --target bolt-ai-production -t ${imageTag} ."
     },
