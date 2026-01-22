@@ -12,6 +12,7 @@ import { IconButton } from '~/components/ui/IconButton';
 import { toast } from 'react-toastify';
 import { SpeechRecognitionButton } from '~/components/chat/SpeechRecognition';
 import { SupabaseConnection } from './SupabaseConnection';
+import { ImportChat } from './chatExportAndImport/ImportChat';
 import { ExpoQrModal } from '~/components/workbench/ExpoQrModal';
 import styles from './BaseChat.module.scss';
 import type { ProviderInfo } from '~/types/model';
@@ -61,6 +62,7 @@ interface ChatBoxProps {
   setDesignScheme?: (scheme: DesignScheme) => void;
   selectedElement?: ElementInfo | null;
   setSelectedElement?: ((element: ElementInfo | null) => void) | undefined;
+  importChat?: (description: string, messages: any[]) => Promise<void>;
 }
 
 export const ChatBox: React.FC<ChatBoxProps> = (props) => {
@@ -338,6 +340,7 @@ export const ChatBox: React.FC<ChatBoxProps> = (props) => {
             </div>
           ) : null}
           {/* <SupabaseConnection /> */}
+          { !props.chatStarted && ImportChat(props.importChat) }
           <ExpoQrModal open={props.qrModalOpen} onClose={() => props.setQrModalOpen(false)} />
         </div>
       </div>
