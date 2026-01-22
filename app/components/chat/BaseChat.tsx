@@ -469,10 +469,14 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                   setDesignScheme={setDesignScheme}
                   selectedElement={selectedElement}
                   setSelectedElement={setSelectedElement}
+                  importChat={importChat}
                 />
               </div>
             </StickToBottom>
             <div className="flex flex-col justify-center">
+              <p className="text-sm text-bolt-elements-textSecondary text-center mb-4 px-4 lg:px-0">
+                Let’s build your AI-powered prototype. Please read this <a href="/Legion AI Alpha User Guide.pdf" target="_blank" rel="noopener noreferrer" className='text-bolt-elements-borderColorActive hover:underline'>User Guideline</a>.
+              </p>
               <div className="flex flex-col gap-5">
                 {!chatStarted &&
                   ExamplePrompts((event, messageInput) => {
