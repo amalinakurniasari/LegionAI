@@ -10,69 +10,66 @@ type ChatData = {
 
 export function ImportChat(importChat: ((description: string, messages: Message[]) => Promise<void>) | undefined) {
   return (
-    <div className="flex flex-col items-center justify-center w-auto">
-      <input
-        type="file"
-        id="chat-import"
-        className="hidden"
-        accept=".json"
-        onChange={async (e) => {
-          const file = e.target.files?.[0];
+      <>
+          <input
+              type="file"
+              id="chat-import"
+              className="hidden"
+              accept=".json"
+              onChange={async (e) => {
+                  const file = e.target.files?.[0];
 
-          if (file && importChat) {
-            try {
-              const reader = new FileReader();
+                  if (file && importChat) {
+                      try {
+                          const reader = new FileReader();
 
-              reader.onload = async (e) => {
-                try {
-                  const content = e.target?.result as string;
-                  const data = JSON.parse(content) as ChatData;
+                          reader.onload = async (e) => {
+                              try {
+                                  const content = e.target?.result as string;
+                                  const data = JSON.parse(content) as ChatData;
 
-                  // Standard format
-                  if (Array.isArray(data.messages)) {
-                    await importChat(data.description || 'Imported Chat', data.messages);
-                    toast.success('Chat imported successfully');
+                                  // Standard format
+                                  if (Array.isArray(data.messages)) {
+                                      await importChat(data.description || 'Imported Chat', data.messages);
+                                      toast.success('Chat imported successfully');
 
-                    return;
-                  }
+                                      return;
+                                  }
 
-                  toast.error('Invalid chat file format');
-                } catch (error: unknown) {
-                  if (error instanceof Error) {
-                    toast.error('Failed to parse chat file: ' + error.message);
+                                  toast.error('Invalid chat file format');
+                              } catch (error: unknown) {
+                                  if (error instanceof Error) {
+                                      toast.error('Failed to parse chat file: ' + error.message);
+                                  } else {
+                                      toast.error('Failed to parse chat file');
+                                  }
+                              }
+                          };
+                          reader.onerror = () => toast.error('Failed to read chat file');
+                          reader.readAsText(file);
+                      } catch (error) {
+                          toast.error(error instanceof Error ? error.message : 'Failed to import chat');
+                      }
+                      e.target.value = ''; // Reset file input
                   } else {
-                    toast.error('Failed to parse chat file');
+                      toast.error('Something went wrong');
                   }
-                }
-              };
-              reader.onerror = () => toast.error('Failed to read chat file');
-              reader.readAsText(file);
-            } catch (error) {
-              toast.error(error instanceof Error ? error.message : 'Failed to import chat');
-            }
-            e.target.value = ''; // Reset file input
-          } else {
-            toast.error('Something went wrong');
-          }
-        }}
-      />
-      <div className="flex flex-col items-center gap-4 max-w-2xl text-center">
-        <div className="flex gap-2">
+              }}
+          />
           <IconButton
-            onClick={() => {
-              const input = document.getElementById('chat-import');
-              input?.click();
-            }}
-            size="sm"
-            className={classNames(
-              'transition-all flex items-center gap-1 px-1.5',
-              'bg-bolt-elements-item-backgroundDefault text-bolt-elements-item-contentDefault'
-            )}
+              onClick={() => {
+                  const input = document.getElementById('chat-import');
+                  input?.click();
+              }}
+              size="sm"
+              title='Import Chat'
+              className={classNames(
+                  'transition-all flex items-center gap-1 px-1.5',
+                  'bg-bolt-elements-item-backgroundDefault text-bolt-elements-item-contentDefault'
+              )}
           >
-            <div className="i-ph:download-simple w-4 h-4"></div>
+              <div className="i-ph:download-simple text-xl" />
           </IconButton>
-        </div>
-      </div>
-    </div>
+      </>
   );
 }
