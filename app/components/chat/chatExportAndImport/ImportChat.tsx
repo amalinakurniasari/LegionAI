@@ -64,11 +64,11 @@ export function ImportChat(importChat: ((description: string, messages: Message[
               size="sm"
               title='Import Chat'
               className={classNames(
-                  'transition-all flex items-center gap-1 px-1.5',
+                  'transition-all flex items-center',
                   'bg-bolt-elements-item-backgroundDefault text-bolt-elements-item-contentDefault'
               )}
           >
-              <div className="i-ph:download-simple text-xl" />
+              <div className="i-ph:file-arrow-up text-xl" />
           </IconButton>
       </>
   );
