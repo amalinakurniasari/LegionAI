@@ -53,22 +53,14 @@ export function getOIDCConfig(
   origin?: string,
   env?: Record<string, string | undefined>,
 ): OIDCConfig {
-  const tenantId =
-    getEnvOptional('VITE_AZURE_TENANT_ID', env) ??
-    getEnv('AZURE_TENANT_ID', undefined, env);
-  const clientId =
-    getEnvOptional('VITE_AZURE_CLIENT_ID', env) ??
-    getEnv('AZURE_CLIENT_ID', undefined, env);
+  const tenantId = getEnv('VITE_AZURE_TENANT_ID', undefined, env) ;
+  const clientId = getEnv('VITE_AZURE_CLIENT_ID', undefined, env) ;
 
   const resolvedOrigin = origin || getOrigin();
-  const redirectFromEnv =
-    getEnvOptional('VITE_AZURE_REDIRECT_URI', env) ??
-    getEnvOptional('AZURE_REDIRECT_URI', env);
+  const redirectFromEnv = getEnv('VITE_AZURE_REDIRECT_URI', undefined, env);
   const redirectUri = redirectFromEnv || `${resolvedOrigin}/auth/callback`;
 
-  const clientSecret =
-    getEnvOptional('VITE_AZURE_CLIENT_SECRET', env) ??
-    getEnvOptional('AZURE_CLIENT_SECRET', env);
+  const clientSecret = getEnv('VITE_AZURE_CLIENT_SECRET', undefined, env);
   const scopes = ['openid', 'profile', 'email', 'offline_access'];
 
   return { tenantId, clientId, clientSecret, redirectUri, scopes };

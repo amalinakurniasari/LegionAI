@@ -10,10 +10,10 @@ export type OIDCConfig = {
 };
 
 export function getConfig(): OIDCConfig {
-  const tenantId = mustGetEnv('AZURE_TENANT_ID');
-  const clientId = mustGetEnv('AZURE_CLIENT_ID');
-  const redirectUri = mustGetEnv('AZURE_REDIRECT_URI');
-  const clientSecret = process.env.AZURE_CLIENT_SECRET;
+  const tenantId = mustGetEnv('VITE_AZURE_TENANT_ID');
+  const clientId = mustGetEnv('VITE_AZURE_CLIENT_ID');
+  const redirectUri = mustGetEnv('VITE_AZURE_REDIRECT_URI');
+  const clientSecret = process.env.VITE_AZURE_CLIENT_SECRET;
   const scopes = ['openid', 'profile', 'email', 'offline_access'];
   return { tenantId, clientId, redirectUri, clientSecret, scopes };
 }
