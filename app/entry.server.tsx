@@ -15,10 +15,10 @@ export default async function handleRequest(
   _loadContext: AppLoadContext,
 ) {
   // await initializeModelList({});
-  const guard = await enforceAuthGuard(request);
-  if (guard) {
-    return guard;
-  }
+  // const guard = await enforceAuthGuard(request);
+  // if (guard) {
+  //   return guard;
+  // }
 
 
   const readable = await renderToReadableStream(<RemixServer context={remixContext} url={request.url} />, {
