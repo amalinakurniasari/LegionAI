@@ -161,6 +161,9 @@ importers:
       '@remix-run/cloudflare-pages':
         specifier: ^2.15.2
         version: 2.16.8(@cloudflare/workers-types@4.20250722.0)(typescript@5.8.3)
+      '@remix-run/express':
+        specifier: ^2.15.0
+        version: 2.16.8(express@4.21.2)(typescript@5.8.3)
       '@remix-run/node':
         specifier: ^2.15.2
         version: 2.16.8(typescript@5.8.3)
@@ -224,6 +227,9 @@ importers:
       electron-updater:
         specifier: ^6.3.9
         version: 6.6.2
+      express:
+        specifier: ^4.21.0
+        version: 4.21.2
       file-saver:
         specifier: ^2.0.5
         version: 2.0.5
@@ -332,6 +338,9 @@ importers:
       tailwind-merge:
         specifier: ^2.2.1
         version: 2.6.0
+      undici:
+        specifier: ^6.21.0
+        version: 6.21.3
       unist-util-visit:
         specifier: ^5.0.0
         version: 5.0.0
@@ -5112,7 +5121,7 @@ packages:
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@9.3.5:
     resolution: {integrity: sha512-e1LleDykUz2Iu+MTYdkSsuWX8lvAjAcs0Xef0lNIu0S2wOAzuTxCJtcd9S3cijlwYF18EsU3rzb8jPVobxDh9Q==}
