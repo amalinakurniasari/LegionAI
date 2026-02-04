@@ -18,6 +18,31 @@ RUN apt-get update && apt-get install -y --no-install-recommends git \
 ARG VITE_PUBLIC_APP_URL
 ENV VITE_PUBLIC_APP_URL=${VITE_PUBLIC_APP_URL}
 
+# Accept Azure authentication build-time variables
+ARG VITE_AZURE_CLIENT_ID
+ARG VITE_AZURE_TENANT_ID
+ARG VITE_AZURE_CLIENT_SECRET
+ARG VITE_AZURE_REDIRECT_URI
+ARG VITE_BASE_URL
+ARG VITE_GITHUB_ACCESS_TOKEN
+ARG VITE_GITHUB_TOKEN_TYPE
+ARG VITE_DEFAULT_THEME
+ARG VITE_DEFAULT_PROVIDER
+ARG VITE_DEFAULT_MODEL
+ARG MIDAS_API_BASE_URL
+
+ENV VITE_AZURE_CLIENT_ID=${VITE_AZURE_CLIENT_ID} \
+    VITE_AZURE_TENANT_ID=${VITE_AZURE_TENANT_ID} \
+    VITE_AZURE_CLIENT_SECRET=${VITE_AZURE_CLIENT_SECRET} \
+    VITE_AZURE_REDIRECT_URI=${VITE_AZURE_REDIRECT_URI} \
+    VITE_BASE_URL=${VITE_BASE_URL} \
+    VITE_GITHUB_ACCESS_TOKEN=${VITE_GITHUB_ACCESS_TOKEN} \
+    VITE_GITHUB_TOKEN_TYPE=${VITE_GITHUB_TOKEN_TYPE} \
+    VITE_DEFAULT_THEME=${VITE_DEFAULT_THEME} \
+    VITE_DEFAULT_PROVIDER=${VITE_DEFAULT_PROVIDER} \
+    VITE_DEFAULT_MODEL=${VITE_DEFAULT_MODEL} \
+    MIDAS_API_BASE_URL=${MIDAS_API_BASE_URL}
+
 # Install deps efficiently
 COPY package.json pnpm-lock.yaml* ./
 RUN pnpm fetch
@@ -63,6 +88,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl \
 COPY --from=prod-deps /app/build /app/build
 COPY --from=prod-deps /app/node_modules /app/node_modules
 COPY --from=prod-deps /app/package.json /app/package.json
+COPY --from=prod-deps /app/server.js /app/server.js
 
 EXPOSE 5173
 
@@ -71,7 +97,7 @@ HEALTHCHECK --interval=10s --timeout=3s --start-period=5s --retries=5 \
   CMD curl -fsS http://localhost:5173/ || exit 1
 
 # Start using dockerstart script with Wrangler
-CMD ["pnpm", "run", "start:node"]
+CMD ["pnpm", "run", "dockerstart:node"]
 
 
 # ---- development stage ----
