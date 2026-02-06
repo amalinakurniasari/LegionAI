@@ -1,3 +1,4 @@
+import 'dd-trace/init';
 import { installGlobals } from '@remix-run/node';
 import { createRequestHandler } from '@remix-run/express';
 import express            from 'express';
