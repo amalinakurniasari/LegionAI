@@ -113,6 +113,9 @@ export default defineConfig({
     ['b', {}],
   ],
   theme: {
+    fontSize: {
+      xsm: '12px',
+    },
     colors: {
       ...COLOR_PRIMITIVES,
       bolt: {

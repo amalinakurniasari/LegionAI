@@ -467,7 +467,7 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
                   left: 0;
                   right: 0;
                   text-align: center;
-                  font-size: 14px;
+                  font-size: 12px;
                   color: #333;
                 }
                 

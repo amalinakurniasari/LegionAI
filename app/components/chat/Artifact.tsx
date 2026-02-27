@@ -88,7 +88,7 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
             }}
           >
             <div className="px-5 p-3.5 w-full text-left">
-              <div className="w-full text-bolt-elements-textPrimary font-medium leading-5 text-sm">
+              <div className="w-full text-bolt-elements-textPrimary font-medium leading-5 text-xsm">
                 {/* Use the dynamic title here */}
                 {dynamicTitle}
               </div>
@@ -124,7 +124,7 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
                 <div className="i-svg-spinners:90-ring-with-bg"></div>
               )}
             </div>
-            <div className="text-bolt-elements-textPrimary font-medium leading-5 text-sm">
+            <div className="text-bolt-elements-textPrimary font-medium leading-5 text-xsm">
               {/* This status text remains the same */}
               {allActionFinished
                 ? artifact.id === 'restored-project-setup'
@@ -145,7 +145,7 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
             >
               <div className="bg-bolt-elements-artifacts-borderColor h-[1px]" />
 
-              <div className="p-5 text-left bg-bolt-elements-actions-background">
+              <div className="p-3 text-left bg-bolt-elements-actions-background">
                 <ActionList actions={actions} />
               </div>
             </motion.div>
@@ -211,7 +211,7 @@ const ActionList = memo(({ actions }: ActionListProps) => {
                 ease: cubicEasingFn,
               }}
             >
-              <div className="flex items-center gap-1.5 text-sm">
+              <div className="flex items-center gap-1.5 text-xsm">
                 <div className={classNames('text-lg', getIconColor(action.status))}>
                   {status === 'running' ? (
                     <>

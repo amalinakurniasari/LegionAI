@@ -71,7 +71,7 @@ export const Markdown = memo(
                     <span className="text-xs text-bolt-elements-textSecondary">.{elementData.className}</span>
                   )}
                 </div>
-                <code className="block text-sm !text-bolt-elements-textSecondary !bg-bolt-elements-background-depth-2 border border-bolt-elements-borderColor p-2 rounded">
+                <code className="block text-xsm !text-bolt-elements-textSecondary !bg-bolt-elements-background-depth-2 border border-bolt-elements-borderColor p-2 rounded">
                   {elementData?.displayText}
                 </code>
               </div>

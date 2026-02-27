@@ -113,7 +113,7 @@ export const ToolInvocations = memo(({ toolInvocations, toolCallAnnotations, add
             <div className="i-ph:wrench text-xl text-bolt-elements-textSecondary hover:text-bolt-elements-textPrimary transition-colors"></div>
           </div>
           <div className="border-l border-bolt-elements-borderColor p-2.5 w-full text-left">
-            <div className="w-full text-bolt-elements-textPrimary font-medium leading-5 text-sm">
+            <div className="w-full text-bolt-elements-textPrimary font-medium leading-5 text-xsm">
               MCP Tool Invocations{' '}
               {hasToolResults && (
                 <span className="w-full w-full text-bolt-elements-textSecondary text-xs mt-0.5">
@@ -174,7 +174,7 @@ export const ToolInvocations = memo(({ toolInvocations, toolCallAnnotations, add
           >
             <div className="bg-bolt-elements-artifacts-borderColor h-[1px]" />
 
-            <div className="p-5 text-left bg-bolt-elements-actions-background">
+            <div className="p-3 text-left bg-bolt-elements-actions-background">
               <ToolResultsList toolInvocations={toolResults} toolCallAnnotations={toolCallAnnotations} theme={theme} />
             </div>
           </motion.div>

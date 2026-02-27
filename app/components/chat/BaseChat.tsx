@@ -363,7 +363,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
               </div>
             )}
             <StickToBottom
-              className={classNames('pt-6 px-2 sm:px-6 relative', {
+              className={classNames('pt-6 px-2 sm:px-4 relative', {
                 'h-full flex flex-col modern-scrollbar': chatStarted,
               })}
               resize="smooth"
@@ -374,7 +374,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                   {() => {
                     return chatStarted ? (
                       <Messages
-                        className="flex flex-col flex-1 max-w-[var(--chat-min-width)] pb-4 mx-auto z-1"
+                        className="flex flex-col flex-1 max-w-[var(--chat-min-width)] pb-4 z-1"
                         messages={messages}
                         isStreaming={isStreaming}
                         append={append}
@@ -390,7 +390,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                 <ScrollToBottom />
               </StickToBottom.Content>
               <div
-                className={classNames('my-auto flex flex-col gap-2 w-full mx-auto z-prompt mb-6', {
+                className={classNames('my-auto flex flex-col gap-2 w-full z-prompt mb-6', {
                   'sticky bottom-2 max-w-[var(--chat-min-width)]': chatStarted,
                 })}
               >
@@ -471,12 +471,13 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                   setSelectedElement={setSelectedElement}
                   importChat={importChat}
                 />
+                <p className="text-sm text-bolt-elements-textSecondary text-center">
+                Let’s build your AI-powered prototype. Please read this <a href="/Legion AI Alpha User Guide.pdf" target="_blank" rel="noopener noreferrer" className='text-bolt-elements-borderColorActive hover:underline'>User Guideline</a>.
+              </p>
+              <div className="flex flex-col gap-5"></div>
               </div>
             </StickToBottom>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-bolt-elements-textSecondary text-center mb-4 px-4 lg:px-0">
-                Let’s build your AI-powered prototype. Please read this <a href="/Legion AI Alpha User Guide.pdf" target="_blank" rel="noopener noreferrer" className='text-bolt-elements-borderColorActive hover:underline'>User Guideline</a>.
-              </p>
               <div className="flex flex-col gap-5">
                 {!chatStarted &&
                   ExamplePrompts((event, messageInput) => {
