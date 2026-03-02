@@ -1097,6 +1097,35 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
             </div>
           )}
 
+          {isPreviewLoading && (
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'bg-bolt-elements-background-depth-2',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                zIndex: 100,
+                borderRadius: '4px',
+              }}
+            >
+              <div
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  border: '4px solid rgba(255, 255, 255, 0.2)',
+                  borderTop: '4px solid rgb(109, 40, 217)',
+                  borderRadius: '50%',
+                  animation: 'spin 1s linear infinite',
+                }}
+              />
+            </div>
+          )}
+
           {isDeviceModeOn && !showDeviceFrameInPreview && (
             <>
               {/* Width indicator */}

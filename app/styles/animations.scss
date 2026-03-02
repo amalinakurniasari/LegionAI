@@ -47,3 +47,10 @@
     transform: translateY(6px);
   }
 }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
