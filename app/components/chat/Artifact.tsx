@@ -186,7 +186,7 @@ const actionVariants = {
 
 export function openArtifactInWorkbench(filePath: any) {
   if (workbenchStore.currentView.get() !== 'code') {
-    workbenchStore.currentView.set('code');
+    workbenchStore.currentView.set('preview');
   }
 
   workbenchStore.setSelectedFile(`${WORK_DIR}/${filePath}`);

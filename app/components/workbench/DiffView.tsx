@@ -453,7 +453,7 @@ const CodeLine = memo(
     };
 
     return (
-      <div className="flex group min-w-fit">
+      <div className="flex group min-w-fit text-xs">
         <div className={lineNumberStyles}>{lineNumber + 1}</div>
         <div className={`${lineContentStyles} ${bgColor}`}>
           <span className="mr-2 text-bolt-elements-textTertiary">

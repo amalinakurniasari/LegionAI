@@ -7,6 +7,7 @@ import { PortDropdown } from './PortDropdown';
 import { ScreenshotSelector } from './ScreenshotSelector';
 import { expoUrlAtom } from '~/lib/stores/qrCodeStore';
 import { ExpoQrModal } from '~/components/workbench/ExpoQrModal';
+import { PreviewSkeleton } from './PreviewSkeleton';
 import type { ElementInfo } from './Inspector';
 
 type ResizeSide = 'left' | 'right' | null;
@@ -1092,9 +1093,7 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
               />
             </>
           ) : (
-            <div className="flex w-full h-full justify-center items-center bg-bolt-elements-background-depth-1 text-bolt-elements-textPrimary">
-              No preview available
-            </div>
+            <PreviewSkeleton />
           )}
 
           {isPreviewLoading && (
@@ -1107,22 +1106,15 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
                 bottom: 0,
                 background: 'bg-bolt-elements-background-depth-2',
                 display: 'flex',
+                flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
                 zIndex: 100,
                 borderRadius: '4px',
               }}
             >
-              <div
-                style={{
-                  width: '40px',
-                  height: '40px',
-                  border: '4px solid rgba(255, 255, 255, 0.2)',
-                  borderTop: '4px solid rgb(109, 40, 217)',
-                  borderRadius: '50%',
-                  animation: 'spin 1s linear infinite',
-                }}
-              />
+              <div className="w-12 h-12 border-4 border-bolt-elements-borderColor rounded-full animate-spin border-t-bolt-elements-item-contentAccent" />
+              <p className="text-sm text-bolt-elements-textSecondary">Loading preview..</p>
             </div>
           )}
 
