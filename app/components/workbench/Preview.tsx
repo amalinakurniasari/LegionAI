@@ -90,6 +90,8 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
   const [showDeviceFrameInPreview, setShowDeviceFrameInPreview] = useState(false);
   const expoUrl = useStore(expoUrlAtom);
   const [isExpoQrModalOpen, setIsExpoQrModalOpen] = useState(false);
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
+  const previewReadyRequestIdRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (!activePreview) {
@@ -103,6 +105,45 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
     setIframeUrl(baseUrl);
     setDisplayPath('/');
   }, [activePreview]);
+
+  // Detect when preview content is ready after iframe loads
+  useEffect(() => {
+    const iframe = iframeRef.current;
+
+    if (!iframe || !iframeUrl) {
+      return;
+    }
+
+    const handleIframeLoad = () => {
+      // Small delay to let inspector script initialize
+      setTimeout(() => {
+        if (!iframe.contentWindow) {
+          console.warn('[Preview] Iframe contentWindow not available after load');
+          return;
+        }
+
+        const requestId = buildRequestId();
+        previewReadyRequestIdRef.current = requestId;
+        setIsPreviewLoading(true);
+
+        iframe.contentWindow.postMessage(
+          {
+            type: 'REQUEST_ELEMENT_READY',
+            selector: '#root',
+            requestId,
+            timeoutMs: 10000,
+          },
+          '*',
+        );
+      }, 100);
+    };
+
+    iframe.addEventListener('load', handleIframeLoad);
+
+    return () => {
+      iframe.removeEventListener('load', handleIframeLoad);
+    };
+  }, [iframeUrl]);
 
   const findMinPortIndex = useCallback(
     (minIndex: number, preview: { port: number }, index: number, array: { port: number }[]) => {
@@ -122,6 +163,10 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
     if (iframeRef.current) {
       iframeRef.current.src = iframeRef.current.src;
     }
+  };
+
+  const buildRequestId = () => {
+    return `ready-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
   };
 
   const toggleFullscreen = async () => {
@@ -667,6 +712,20 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
         const html = event.data.html;
         navigator.clipboard.writeText(html);
         toast.success('Preview design copied to clipboard, you can paste it into Figma Plugin.');
+      } else if (event.data.type === 'ELEMENT_READY') {
+        const { requestId, ready, reason, selector } = event.data;
+
+        // Handle preview load readiness check
+        if (requestId === previewReadyRequestIdRef.current) {
+          previewReadyRequestIdRef.current = null;
+          setIsPreviewLoading(false);
+
+          if (ready) {
+            console.debug('[Preview] Preview content is ready', { selector });
+          }
+
+          return;
+        }
       }
     };
 

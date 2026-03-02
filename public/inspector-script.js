@@ -3,6 +3,102 @@
   let inspectorStyle = null;
   let currentHighlight = null;
 
+  function isElementRenderable(element) {
+    if (!element) {
+      return false;
+    }
+
+    const rect = element.getBoundingClientRect();
+    const styles = window.getComputedStyle(element);
+
+    return (
+      rect.width > 0 &&
+      rect.height > 0 &&
+      styles.display !== 'none' &&
+      styles.visibility !== 'hidden' &&
+      styles.opacity !== '0'
+    );
+  }
+
+  function waitForElementReady(selector, timeoutMs = 8000) {
+    return new Promise((resolve) => {
+      let resolved = false;
+      let observer = null;
+
+      const finish = (result) => {
+        if (resolved) {
+          return;
+        }
+
+        resolved = true;
+
+        if (observer) {
+          observer.disconnect();
+          observer = null;
+        }
+
+        resolve(result);
+      };
+
+      const resolveReady = (element) => {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            finish({
+              ready: true,
+              reason: 'rendered',
+              selector,
+              elementInfo: createElementInfo(element),
+            });
+          });
+        });
+      };
+
+      const checkNow = () => {
+        const element = document.querySelector(selector);
+
+        if (isElementRenderable(element)) {
+          resolveReady(element);
+          return true;
+        }
+
+        return false;
+      };
+
+      if (checkNow()) {
+        return;
+      }
+
+      observer = new MutationObserver(() => {
+        checkNow();
+      });
+
+      observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+      });
+
+      window.setTimeout(() => {
+        if (resolved) {
+          return;
+        }
+
+        const element = document.querySelector(selector);
+
+        if (isElementRenderable(element)) {
+          resolveReady(element);
+          return;
+        }
+
+        finish({
+          ready: false,
+          reason: 'timeout',
+          selector,
+        });
+      }, timeoutMs);
+    });
+  }
+
   // Function to get relevant styles
   function getRelevantStyles(element) {
     const computedStyles = window.getComputedStyle(element);
@@ -289,6 +385,35 @@
         type: 'IFRAME_HTML',
         html: document.getElementById('root')?.parentElement?.parentElement?.outerHTML,
       }, '*');
+    } else if (event.data?.type === 'REQUEST_ELEMENT_READY') {
+      const selector = event.data.selector || '#root';
+      const requestId = event.data.requestId;
+      const timeoutMs = typeof event.data.timeoutMs === 'number' ? event.data.timeoutMs : 8000;
+
+      waitForElementReady(selector, timeoutMs)
+        .then((result) => {
+          window.parent.postMessage(
+            {
+              type: 'ELEMENT_READY',
+              requestId,
+              ...result,
+            },
+            '*',
+          );
+        })
+        .catch((error) => {
+          window.parent.postMessage(
+            {
+              type: 'ELEMENT_READY',
+              requestId,
+              ready: false,
+              reason: 'error',
+              selector,
+              error: error instanceof Error ? error.message : String(error),
+            },
+            '*',
+          );
+        });
     }
   });
 
