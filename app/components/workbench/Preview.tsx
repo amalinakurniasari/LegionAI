@@ -7,7 +7,7 @@ import { PortDropdown } from './PortDropdown';
 import { ScreenshotSelector } from './ScreenshotSelector';
 import { expoUrlAtom } from '~/lib/stores/qrCodeStore';
 import { ExpoQrModal } from '~/components/workbench/ExpoQrModal';
-import { PreviewSkeleton } from './PreviewSkeleton';
+import { PreviewLottie } from './PreviewLottie';
 import type { ElementInfo } from './Inspector';
 
 type ResizeSide = 'left' | 'right' | null;
@@ -1093,7 +1093,7 @@ export const Preview = memo(({ setSelectedElement }: PreviewProps) => {
               />
             </>
           ) : (
-            <PreviewSkeleton />
+            <PreviewLottie />
           )}
 
           {isPreviewLoading && (
