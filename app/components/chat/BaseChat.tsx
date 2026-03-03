@@ -209,6 +209,10 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
         try {
           parsedApiKeys = getApiKeysFromCookies();
           setApiKeys(parsedApiKeys);
+
+          if (Object.values(parsedApiKeys).some((key) => !key?.trim())) {
+            setIsModelSettingsCollapsed(false);
+          }
         } catch (error) {
           console.error('Error loading API keys from cookies:', error);
           Cookies.remove('apiKeys');
@@ -234,6 +238,10 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
       const newApiKeys = { ...apiKeys, [providerName]: apiKey };
       setApiKeys(newApiKeys);
       Cookies.set('apiKeys', JSON.stringify(newApiKeys));
+
+      if (!apiKey?.trim()) {
+        setIsModelSettingsCollapsed(false);
+      }
 
       setIsModelLoading(providerName);
 
