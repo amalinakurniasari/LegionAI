@@ -1,4 +1,4 @@
-import { Document, ObjectId } from 'mongodb';
+import type { Document, ObjectId } from 'mongodb';
 
 export interface IBaseMongoEntitySupportNeeded extends Document {
     _id?: ObjectId;
