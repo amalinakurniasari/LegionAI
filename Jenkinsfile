@@ -42,6 +42,12 @@ PipelineDockerEntryV3([
         VITE_GITHUB_ACCESS_TOKEN = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'VITE_GITHUB_ACCESS_TOKEN')
         VITE_GITHUB_TOKEN_TYPE = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'VITE_GITHUB_TOKEN_TYPE')
         VITE_LOG_LEVEL = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'VITE_LOG_LEVEL')
+        MONGODB_URI = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_URI')
+        MONGODB_MAX_POOL_SIZE = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_MAX_POOL_SIZE')
+        MONGODB_MIN_POOL_SIZE = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_MIN_POOL_SIZE')
+        MONGODB_SOCKET_TIMEOUT_MS = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_SOCKET_TIMEOUT_MS')
+        MONGODB_CONNECT_TIMEOUT_MS = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_CONNECT_TIMEOUT_MS')
+        MONGODB_KEEP_ALIVE = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_KEEP_ALIVE')
     },
 
     // Service Test
@@ -83,6 +89,12 @@ PipelineDockerEntryV3([
             --build-arg VITE_GITHUB_ACCESS_TOKEN=${VITE_GITHUB_ACCESS_TOKEN} \
             --build-arg VITE_GITHUB_TOKEN_TYPE=${VITE_GITHUB_TOKEN_TYPE} \
             --build-arg VITE_LOG_LEVEL=${VITE_LOG_LEVEL} \
+            --build-arg MONGODB_URI=${MONGODB_URI} \
+            --build-arg MONGODB_MAX_POOL_SIZE=${MONGODB_MAX_POOL_SIZE} \
+            --build-arg MONGODB_MIN_POOL_SIZE=${MONGODB_MIN_POOL_SIZE} \
+            --build-arg MONGODB_SOCKET_TIMEOUT_MS=${MONGODB_SOCKET_TIMEOUT_MS} \
+            --build-arg MONGODB_CONNECT_TIMEOUT_MS=${MONGODB_CONNECT_TIMEOUT_MS} \
+            --build-arg MONGODB_KEEP_ALIVE=${MONGODB_KEEP_ALIVE} \
             --target bolt-ai-production -t ${imageTag} ."
     },
 
