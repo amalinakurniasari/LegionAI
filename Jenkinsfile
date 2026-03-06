@@ -69,32 +69,32 @@ PipelineDockerEntryV3([
 
         // Build image sesuai target menggunakan buildCommand dari pipeline library
         sh "${buildCommand} \
-            --build-arg ARGS_NODE_BUILD=${envStage} \
-            --build-arg MIDAS_API_BASE_URL=${MIDAS_API_BASE_URL} \
-            --build-arg MIDAS_API_KEY=${MIDAS_API_KEY} \
-            --build-arg DEFAULT_NUM_CTX=${DEFAULT_NUM_CTX} \
-            --build-arg OPENAI_LIKE_API_BASE_URL=${OPENAI_LIKE_API_BASE_URL} \
-            --build-arg OPENAI_LIKE_API_KEY=${OPENAI_LIKE_API_KEY} \
-            --build-arg SESSION_SECRET=${SESSION_SECRET} \
-            --build-arg VITE_AZURE_CLIENT_ID=${VITE_AZURE_CLIENT_ID} \
-            --build-arg VITE_AZURE_CLIENT_SECRET=${VITE_AZURE_CLIENT_SECRET} \
-            --build-arg VITE_AZURE_REDIRECT_URI=${VITE_AZURE_REDIRECT_URI} \
-            --build-arg VITE_AZURE_TENANT_ID=${VITE_AZURE_TENANT_ID} \
-            --build-arg VITE_BASE_URL=${VITE_BASE_URL} \
-            --build-arg VITE_DEFAULT_MODEL=${VITE_DEFAULT_MODEL} \
-            --build-arg VITE_DEFAULT_PROVIDER=${VITE_DEFAULT_PROVIDER} \
-            --build-arg VITE_DEFAULT_THEME=${VITE_DEFAULT_THEME} \
-            --build-arg RUNNING_IN_DOCKER=true \
-            --build-arg NODE_ENV=${NODE_ENV} \
-            --build-arg VITE_GITHUB_ACCESS_TOKEN=${VITE_GITHUB_ACCESS_TOKEN} \
-            --build-arg VITE_GITHUB_TOKEN_TYPE=${VITE_GITHUB_TOKEN_TYPE} \
-            --build-arg VITE_LOG_LEVEL=${VITE_LOG_LEVEL} \
-            --build-arg MONGODB_URI=${MONGODB_URI} \
-            --build-arg MONGODB_MAX_POOL_SIZE=${MONGODB_MAX_POOL_SIZE} \
-            --build-arg MONGODB_MIN_POOL_SIZE=${MONGODB_MIN_POOL_SIZE} \
-            --build-arg MONGODB_SOCKET_TIMEOUT_MS=${MONGODB_SOCKET_TIMEOUT_MS} \
-            --build-arg MONGODB_CONNECT_TIMEOUT_MS=${MONGODB_CONNECT_TIMEOUT_MS} \
-            --build-arg MONGODB_KEEP_ALIVE=${MONGODB_KEEP_ALIVE} \
+            --build-arg ARGS_NODE_BUILD='${envStage}' \
+            --build-arg MIDAS_API_BASE_URL='${MIDAS_API_BASE_URL}' \
+            --build-arg MIDAS_API_KEY='${MIDAS_API_KEY}' \
+            --build-arg DEFAULT_NUM_CTX='${DEFAULT_NUM_CTX}' \
+            --build-arg OPENAI_LIKE_API_BASE_URL='${OPENAI_LIKE_API_BASE_URL}' \
+            --build-arg OPENAI_LIKE_API_KEY='${OPENAI_LIKE_API_KEY}' \
+            --build-arg SESSION_SECRET='${SESSION_SECRET}' \
+            --build-arg VITE_AZURE_CLIENT_ID='${VITE_AZURE_CLIENT_ID}' \
+            --build-arg VITE_AZURE_CLIENT_SECRET='${VITE_AZURE_CLIENT_SECRET}' \
+            --build-arg VITE_AZURE_REDIRECT_URI='${VITE_AZURE_REDIRECT_URI}' \
+            --build-arg VITE_AZURE_TENANT_ID='${VITE_AZURE_TENANT_ID}' \
+            --build-arg VITE_BASE_URL='${VITE_BASE_URL}' \
+            --build-arg VITE_DEFAULT_MODEL='${VITE_DEFAULT_MODEL}' \
+            --build-arg VITE_DEFAULT_PROVIDER='${VITE_DEFAULT_PROVIDER}' \
+            --build-arg VITE_DEFAULT_THEME='${VITE_DEFAULT_THEME}' \
+            --build-arg RUNNING_IN_DOCKER='true' \
+            --build-arg NODE_ENV='${NODE_ENV}' \
+            --build-arg VITE_GITHUB_ACCESS_TOKEN='${VITE_GITHUB_ACCESS_TOKEN}' \
+            --build-arg VITE_GITHUB_TOKEN_TYPE='${VITE_GITHUB_TOKEN_TYPE}' \
+            --build-arg VITE_LOG_LEVEL='${VITE_LOG_LEVEL}' \
+            --build-arg MONGODB_URI='${MONGODB_URI}' \
+            --build-arg MONGODB_MAX_POOL_SIZE='${MONGODB_MAX_POOL_SIZE}' \
+            --build-arg MONGODB_MIN_POOL_SIZE='${MONGODB_MIN_POOL_SIZE}' \
+            --build-arg MONGODB_SOCKET_TIMEOUT_MS='${MONGODB_SOCKET_TIMEOUT_MS}' \
+            --build-arg MONGODB_CONNECT_TIMEOUT_MS='${MONGODB_CONNECT_TIMEOUT_MS}' \
+            --build-arg MONGODB_KEEP_ALIVE='${MONGODB_KEEP_ALIVE}' \
             --target bolt-ai-production -t ${imageTag} ."
     },
 
