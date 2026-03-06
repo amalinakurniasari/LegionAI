@@ -120,23 +120,70 @@ class Mongo implements IMongo {
 }
 
 
-function getMongoConfig(): IMongoConfig {
-    const mongoUri = process.env.MONGODB_URI || '';
+function getMongoConfig(env?: Record<string, string | undefined>): IMongoConfig {
+    // Try to get from multiple sources:
+    // 1. Passed env parameter (from Remix context)
+    // 2. process.env (from Node.js runtime)
+    // 3. global.process.env (from server.js global injection)
+    const getEnvVar = (key: string): string | undefined => {
+        return env?.[key] ||
+               process.env?.[key] ||
+               (typeof global !== 'undefined' && (global as any).process?.env?.[key]);
+    };
+
+    const mongoUri = getEnvVar('MONGODB_URI') || '';
+    const maxPoolSize = getEnvVar('MONGODB_MAX_POOL_SIZE');
+    const minPoolSize = getEnvVar('MONGODB_MIN_POOL_SIZE');
+    const socketTimeoutMS = getEnvVar('MONGODB_SOCKET_TIMEOUT_MS');
+    const connectTimeoutMS = getEnvVar('MONGODB_CONNECT_TIMEOUT_MS');
+
+    // Only log if we're actually initializing (not during module load)
+    if (mongoUri) {
+        logger.info('MongoDB URI loaded from environment variable');
+        logger.info(`MongoDB URI: ✓ Set (${mongoUri.substring(0, 20)}...)`);
+        logger.info(`MongoDB Max Pool Size: ${maxPoolSize || '10 (default)'}`);
+    } else {
+        logger.error('❌ MONGODB_URI is not set! MongoDB connection will fail.');
+        logger.error('Available env sources:', {
+            hasEnvParam: !!env,
+            hasProcessEnv: typeof process !== 'undefined' && !!process.env,
+            hasGlobalProcessEnv: typeof global !== 'undefined' && !!(global as any).process?.env,
+            processEnvKeys: typeof process !== 'undefined' ? Object.keys(process.env || {}).length : 0,
+        });
+    }
 
     return {
         url: mongoUri,
-        maxPoolSize: Number(process.env.MONGODB_MAX_POOL_SIZE) || 10,
-        minPoolSize: Number(process.env.MONGODB_MIN_POOL_SIZE) || 5,
-        socketTimeoutMS: Number(process.env.MONGODB_SOCKET_TIMEOUT_MS) || 45000,
-        connectTimeoutMS: Number(process.env.MONGODB_CONNECT_TIMEOUT_MS) || 10000,
+        maxPoolSize: Number(maxPoolSize) || 10,
+        minPoolSize: Number(minPoolSize) || 5,
+        socketTimeoutMS: Number(socketTimeoutMS) || 45000,
+        connectTimeoutMS: Number(connectTimeoutMS) || 10000,
     };
 }
 
-const mongoConfig = getMongoConfig();
+// Lazy initialization - only create instances when first accessed
+let mongoWriteInstance: Mongo | null = null;
+let mongoReadInstance: Mongo | null = null;
 
+export const MongoWrite = new Proxy({} as Mongo, {
+    get(_target, prop) {
+        if (!mongoWriteInstance) {
+            const config = getMongoConfig();
+            mongoWriteInstance = Mongo.getWriteInstance(config);
+        }
+        return (mongoWriteInstance as any)[prop];
+    }
+});
 
-export const MongoWrite = Mongo.getWriteInstance(mongoConfig);
-export const MongoRead = Mongo.getReadInstance(mongoConfig);
+export const MongoRead = new Proxy({} as Mongo, {
+    get(_target, prop) {
+        if (!mongoReadInstance) {
+            const config = getMongoConfig();
+            mongoReadInstance = Mongo.getReadInstance(config);
+        }
+        return (mongoReadInstance as any)[prop];
+    }
+});
 
 
 export default MongoWrite;
@@ -146,11 +193,26 @@ export async function initializeMongoDB(): Promise<void> {
     try {
         logger.info('Initializing MongoDB connections...');
 
+        // Force initialization by accessing the instances
+        const config = getMongoConfig();
+
+        if (!config.url) {
+            throw new Error('MONGODB_URI is not set. Cannot initialize MongoDB connections.');
+        }
+
+        // Initialize instances if not already done
+        if (!mongoWriteInstance) {
+            mongoWriteInstance = Mongo.getWriteInstance(config);
+        }
+        if (!mongoReadInstance) {
+            mongoReadInstance = Mongo.getReadInstance(config);
+        }
+
         // Connect write instance
-        await MongoWrite.connect();
+        await mongoWriteInstance.connect();
 
         // Connect read instance
-        await MongoRead.connect();
+        await mongoReadInstance.connect();
 
         logger.info('MongoDB connections initialized successfully');
     } catch (error: any) {
@@ -164,10 +226,16 @@ export async function closeMongoDB(): Promise<void> {
     try {
         logger.info('Closing MongoDB connections...');
 
-        await Promise.all([
-            MongoWrite.close(),
-            MongoRead.close(),
-        ]);
+        const promises: Promise<void>[] = [];
+
+        if (mongoWriteInstance) {
+            promises.push(mongoWriteInstance.close());
+        }
+        if (mongoReadInstance) {
+            promises.push(mongoReadInstance.close());
+        }
+
+        await Promise.all(promises);
 
         logger.info('MongoDB connections closed successfully');
     } catch (error: any) {

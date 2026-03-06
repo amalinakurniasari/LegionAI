@@ -1,3 +1,16 @@
+// Load environment variables first, before any other imports
+import 'dotenv/config';
+
+// CRITICAL: Make process.env available globally for bundled code
+// This ensures that environment variables are accessible even in the Remix server bundle
+if (typeof global !== 'undefined') {
+  global.process = global.process || {};
+  global.process.env = global.process.env || {};
+
+  // Copy all environment variables to global.process.env
+  Object.assign(global.process.env, process.env);
+}
+
 import tracer from 'dd-trace';
 tracer.init();
 import { installGlobals } from '@remix-run/node';
@@ -51,4 +64,8 @@ app.all(
 // ── listen ────────────────────────────────────────────────────────────
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`LegionAI  ▶  http://0.0.0.0:${PORT}`);
+  console.log(`Environment check:`);
+  console.log(`  - NODE_ENV: ${process.env.NODE_ENV}`);
+  console.log(`  - MONGODB_URI: ${process.env.MONGODB_URI}`);
+  console.log(`  - RUNNING_IN_DOCKER: ${process.env.RUNNING_IN_DOCKER}`);
 });
