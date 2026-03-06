@@ -114,6 +114,7 @@ class Mongo implements IMongo {
             await this.client.db('admin').command({ ping: 1 });
             return true;
         } catch (error) {
+            logger.error(`MongoDB ${this.connectionType} connection check failed:`, error);
             return false;
         }
     }
