@@ -48,6 +48,7 @@ PipelineDockerEntryV3([
         MONGODB_SOCKET_TIMEOUT_MS = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_SOCKET_TIMEOUT_MS')
         MONGODB_CONNECT_TIMEOUT_MS = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_CONNECT_TIMEOUT_MS')
         MONGODB_KEEP_ALIVE = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_KEEP_ALIVE')
+        MONGODB_DB_NAME = vault.vault('dpe/legion-ui/release/legion-ui-legionai-dev', 'MONGODB_DB_NAME')
     },
 
     // Service Test
@@ -95,6 +96,7 @@ PipelineDockerEntryV3([
             --build-arg MONGODB_SOCKET_TIMEOUT_MS='${MONGODB_SOCKET_TIMEOUT_MS}' \
             --build-arg MONGODB_CONNECT_TIMEOUT_MS='${MONGODB_CONNECT_TIMEOUT_MS}' \
             --build-arg MONGODB_KEEP_ALIVE='${MONGODB_KEEP_ALIVE}' \
+            --build-arg MONGODB_DB_NAME='${MONGODB_DB_NAME}' \
             --target bolt-ai-production -t ${imageTag} ."
     },
 

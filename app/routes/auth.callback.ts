@@ -1,6 +1,8 @@
 import { type AppLoadContext } from '@remix-run/cloudflare';
 import { getSession, commitSession } from '~/lib/auth/session.server';
 import { getOIDCConfig, exchangeCodeForTokens, validateIdToken, extractUserClaims } from '~/lib/auth/oidc.server';
+import { userUsecase } from '~/lib/.server/modules/user/v1/usecase';
+import { logger } from '~/utils/logger';
 
 export const loader = async ({ request, context }: { request: Request; context: AppLoadContext }) => {
   const url = new URL(request.url);
@@ -65,6 +67,17 @@ export const loader = async ({ request, context }: { request: Request; context: 
     session.unset('oidc_nonce');
 
     const setCookie = await commitSession(session);
+
+    try {
+      const result = await userUsecase.createOrUpdateUserFromOIDC(user);
+      if (result.success) {
+        logger.info(`User saved to database: ${result.userId}`);
+      } else {
+        logger.warn(`Failed to save user to database: ${result.message}`);
+      }
+    } catch (dbError) {
+      logger.error('Error saving user to database:', dbError);
+    }
 
     return new Response(null, {
       status: 302,
