@@ -1,5 +1,5 @@
-import type { Document, ObjectId } from 'mongodb';
-
+import { ObjectId } from 'mongodb';
+import type { Document } from 'mongodb';
 export interface IBaseMongoEntity extends Document {
     _id?: ObjectId;
     createdAt?: string;
