@@ -1,0 +1,762 @@
+[
+  {
+    "name": "Accordion",
+    "slug": "accordion",
+    "path": "output/Accordion",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION ACCORDION REACT DOC>",
+        "context": "Accordion Component, used for displaying collapsible content sections.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Accordion } from '@legion-ui-kit/react-core';\n\n<Accordion title='Accordion Title' isOpen={true} onClick={(isOpen) => console.log(isOpen)}>\n  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n</Accordion>",
+        "attrs": "title (ReactNode); isOpen (boolean); onClick (function); contentClassName (string); contentStyle (CSSProperties); disabled (boolean); headerClassName (string); headerStyle (CSSProperties); noToggle (boolean); openedClassName (string); openedStyle (CSSProperties); titleClassName (string); titleStyle (CSSProperties); toggleClassName (string); toggleIcon (string | ReactNode); toggleIconPosition (string); toggleStyle (CSSProperties)",
+        "raw": "<LEGION ACCORDION REACT DOC>\n{\n\"context\": \"Accordion Component, used for displaying collapsible content sections.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Accordion } from '@legion-ui-kit/react-core';\\n\\n<Accordion title='Accordion Title' isOpen={true} onClick={(isOpen) => console.log(isOpen)}>\\n  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\\n</Accordion>\",\n\"attrs\": \"title (ReactNode); isOpen (boolean); onClick (function); contentClassName (string); contentStyle (CSSProperties); disabled (boolean); headerClassName (string); headerStyle (CSSProperties); noToggle (boolean); openedClassName (string); openedStyle (CSSProperties); titleClassName (string); titleStyle (CSSProperties); toggleClassName (string); toggleIcon (string | ReactNode); toggleIconPosition (string); toggleStyle (CSSProperties)\"\n}",
+        "file": "Accordion.txt",
+        "path": "output/Accordion/Accordion.txt",
+        "component": "Accordion",
+        "slug": "accordion",
+        "last_modified": "2026-04-15T15:36:34+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Alert",
+    "slug": "alert",
+    "path": "output/Alert",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION ALERT REACT DOC>",
+        "context": "Alert Component, used for displaying important messages to users with different severity levels.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Alert } from '@legion-ui-kit/react-core'; <Alert title='Alert Title' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.' color='information' />",
+        "attrs": "color (TAlertColor); description (string); descriptionClassName (string); leftIcon (ReactNode); leftIconClassName (string); noLeftIcon (boolean); rightIcon (ReactNode); rightIconClassName (string); title (string); titleClassName (string)",
+        "raw": "<LEGION ALERT REACT DOC>\n{\n\"context\": \"Alert Component, used for displaying important messages to users with different severity levels.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Alert } from '@legion-ui-kit/react-core'; <Alert title='Alert Title' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.' color='information' />\",\n\"attrs\": \"color (TAlertColor); description (string); descriptionClassName (string); leftIcon (ReactNode); leftIconClassName (string); noLeftIcon (boolean); rightIcon (ReactNode); rightIconClassName (string); title (string); titleClassName (string)\"\n}",
+        "file": "Alert.txt",
+        "path": "output/Alert/Alert.txt",
+        "component": "Alert",
+        "slug": "alert",
+        "last_modified": "2026-04-15T15:36:37+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Anchor",
+    "slug": "anchor",
+    "path": "output/Anchor",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION ANCHOR REACT DOC>",
+        "context": "Anchor Component, used for creating navigational links or inline elements that can be styled as links.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Anchor } from '@legion-ui-kit/react-core';\nimport { IconCircleArrowLeftFilled, IconCircleArrowRightFilled } from '@tabler/icons-react';\n\n<Anchor as='a' href='https://example.com' target='_blank'>Anchor</Anchor>",
+        "attrs": "as ('a' | 'span'); disabled (boolean); size ('sm' | 'md' | 'lg'); href (string); target (string)",
+        "raw": "<LEGION ANCHOR REACT DOC>\n{\n\"context\": \"Anchor Component, used for creating navigational links or inline elements that can be styled as links.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Anchor } from '@legion-ui-kit/react-core';\\nimport { IconCircleArrowLeftFilled, IconCircleArrowRightFilled } from '@tabler/icons-react';\\n\\n<Anchor as='a' href='https://example.com' target='_blank'>Anchor</Anchor>\",\n\"attrs\": \"as ('a' | 'span'); disabled (boolean); size ('sm' | 'md' | 'lg'); href (string); target (string)\"\n}",
+        "file": "Anchor.txt",
+        "path": "output/Anchor/Anchor.txt",
+        "component": "Anchor",
+        "slug": "anchor",
+        "last_modified": "2026-04-15T15:36:42+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Avatar",
+    "slug": "avatar",
+    "path": "output/Avatar",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION AVATAR REACT DOC>",
+        "context": "Avatar component, used for displaying user profile images or icons.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Avatar } from '@legion-ui-kit/react-core';\n\n<Avatar src='https://img.freepik.com/free-vector/man-wearing-eyeglasses-avatar-character_24877-83454.jpg' alt='avatar-example-image' size='md' />",
+        "attrs": "src (string); alt (string); size ('sm' | 'md' | 'lg'); imageClassName (string)",
+        "raw": "<LEGION AVATAR REACT DOC>\n{\n\"context\": \"Avatar component, used for displaying user profile images or icons.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Avatar } from '@legion-ui-kit/react-core';\\n\\n<Avatar src='https://img.freepik.com/free-vector/man-wearing-eyeglasses-avatar-character_24877-83454.jpg' alt='avatar-example-image' size='md' />\",\n\"attrs\": \"src (string); alt (string); size ('sm' | 'md' | 'lg'); imageClassName (string)\"\n}",
+        "file": "Avatar.txt",
+        "path": "output/Avatar/Avatar.txt",
+        "component": "Avatar",
+        "slug": "avatar",
+        "last_modified": "2026-04-15T15:36:44+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Badge",
+    "slug": "badge",
+    "path": "output/Badge",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION BADGE REACT DOC>",
+        "context": "Badge component, used for displaying notifications or status indicators.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import Badge from '@legion-ui-kit/react-core'; <Badge label='7' color='primary' size='md' />",
+        "attrs": "color (TBadgeColor); label (string | number); size (TBadgeSize)",
+        "raw": "<LEGION BADGE REACT DOC>\n{\n\"context\": \"Badge component, used for displaying notifications or status indicators.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import Badge from '@legion-ui-kit/react-core'; <Badge label='7' color='primary' size='md' />\",\n\"attrs\": \"color (TBadgeColor); label (string | number); size (TBadgeSize)\"\n}",
+        "file": "Badge.txt",
+        "path": "output/Badge/Badge.txt",
+        "component": "Badge",
+        "slug": "badge",
+        "last_modified": "2026-04-15T15:36:47+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Breadcrumb",
+    "slug": "breadcrumb",
+    "path": "output/Breadcrumb",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION BREADCRUMB REACT DOC>",
+        "context": "Breadcrumb Component, used for displaying a navigational hierarchy of links.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Breadcrumb } from '@legion-ui-kit/react-core'; <Breadcrumb items={[<a href='#'>Home</a>, <a href='#'>Library</a>, <a href='#'>Data</a>]} separator='slash' />",
+        "attrs": "items (ReactNode[]); separator ('slash' | 'chevron' | ReactNode); className (string); itemClassName (string); separatorClassName (string)",
+        "raw": "<LEGION BREADCRUMB REACT DOC>\n{\n\"context\": \"Breadcrumb Component, used for displaying a navigational hierarchy of links.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Breadcrumb } from '@legion-ui-kit/react-core'; <Breadcrumb items={[<a href='#'>Home</a>, <a href='#'>Library</a>, <a href='#'>Data</a>]} separator='slash' />\",\n\"attrs\": \"items (ReactNode[]); separator ('slash' | 'chevron' | ReactNode); className (string); itemClassName (string); separatorClassName (string)\"\n}",
+        "file": "Breadcrumb.txt",
+        "path": "output/Breadcrumb/Breadcrumb.txt",
+        "component": "Breadcrumb",
+        "slug": "breadcrumb",
+        "last_modified": "2026-04-15T15:36:49+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Button",
+    "slug": "button",
+    "path": "output/Button",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION BUTTON REACT DOC>",
+        "context": "Button Component, used for triggering actions or events in the application.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Button } from '@legion-ui-kit/react-core';\n\n<Button color='primary' size='md' variant='solid' block={true} disabled={false} isLoading={false} loadingText='Loading...' loadingIconPosition='left'>\n  Click Me\n</Button>",
+        "attrs": "block (boolean); color (TButtonColor); disabled (boolean); isLoading (boolean); loadingText (string); loadingIconPosition (TLoadingIconPosition); size (TButtonSize); variant (TButtonVariant)",
+        "raw": "<LEGION BUTTON REACT DOC>\n{\n\"context\": \"Button Component, used for triggering actions or events in the application.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Button } from '@legion-ui-kit/react-core';\\n\\n<Button color='primary' size='md' variant='solid' block={true} disabled={false} isLoading={false} loadingText='Loading...' loadingIconPosition='left'>\\n  Click Me\\n</Button>\",\n\"attrs\": \"block (boolean); color (TButtonColor); disabled (boolean); isLoading (boolean); loadingText (string); loadingIconPosition (TLoadingIconPosition); size (TButtonSize); variant (TButtonVariant)\"\n}",
+        "file": "Button.txt",
+        "path": "output/Button/Button.txt",
+        "component": "Button",
+        "slug": "button",
+        "last_modified": "2026-04-15T15:36:54+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Card",
+    "slug": "card",
+    "path": "output/Card",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION CARD REACT DOC>",
+        "context": "Card Component, used for displaying content in a structured format with optional header, body, media, and footer sections.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Card, CardHeader, CardBody, CardFooter, CardMedia } from '@legion-ui-kit/react-core';\n\n<Card elevation='elevation-4'>\n  <CardHeader title='Header Title' description='Header Description' />\n  <CardMedia>\n    <img src='https://example.com/image.jpg' alt='card-media' style={{ width: '100%' }} />\n  </CardMedia>\n  <CardBody title='Body Title'>\n    Content goes here.\n  </CardBody>\n  <CardFooter>\n    <Button variant='soft'>Left Button</Button>\n    <Button>Right Button</Button>\n  </CardFooter>\n</Card>",
+        "attrs": "bordered (boolean); elevation (TCardElevation); noPadding (boolean); children (ReactNode)",
+        "raw": "<LEGION CARD REACT DOC>\n{\n\"context\": \"Card Component, used for displaying content in a structured format with optional header, body, media, and footer sections.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Card, CardHeader, CardBody, CardFooter, CardMedia } from '@legion-ui-kit/react-core';\\n\\n<Card elevation='elevation-4'>\\n  <CardHeader title='Header Title' description='Header Description' />\\n  <CardMedia>\\n    <img src='https://example.com/image.jpg' alt='card-media' style={{ width: '100%' }} />\\n  </CardMedia>\\n  <CardBody title='Body Title'>\\n    Content goes here.\\n  </CardBody>\\n  <CardFooter>\\n    <Button variant='soft'>Left Button</Button>\\n    <Button>Right Button</Button>\\n  </CardFooter>\\n</Card>\",\n\"attrs\": \"bordered (boolean); elevation (TCardElevation); noPadding (boolean); children (ReactNode)\"\n}",
+        "file": "Card.txt",
+        "path": "output/Card/Card.txt",
+        "component": "Card",
+        "slug": "card",
+        "last_modified": "2026-04-15T15:36:58+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Checkbox",
+    "slug": "checkbox",
+    "path": "output/Checkbox",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION CHECKBOX REACT DOC>",
+        "context": "Checkbox component, used for selecting one or more options from a set.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Checkbox } from '@legion-ui-kit/react-core'; <Checkbox label='Checkbox Label' size='md' labelPosition='right' defaultChecked={true} disabled={false} indeterminate={false} />",
+        "attrs": "block (boolean); iconClassName (string); iconStyle (CSSProperties); indeterminate (boolean); inputClassName (string); inputStyle (CSSProperties); label (ReactNode); labelClassName (string); labelPosition (TCheckboxLabelPosition); labelStyle (CSSProperties); size (TCheckboxSize);",
+        "raw": "<LEGION CHECKBOX REACT DOC>\n{\n\"context\": \"Checkbox component, used for selecting one or more options from a set.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Checkbox } from '@legion-ui-kit/react-core'; <Checkbox label='Checkbox Label' size='md' labelPosition='right' defaultChecked={true} disabled={false} indeterminate={false} />\",\n\"attrs\": \"block (boolean); iconClassName (string); iconStyle (CSSProperties); indeterminate (boolean); inputClassName (string); inputStyle (CSSProperties); label (ReactNode); labelClassName (string); labelPosition (TCheckboxLabelPosition); labelStyle (CSSProperties); size (TCheckboxSize);\"\n}",
+        "file": "Checkbox.txt",
+        "path": "output/Checkbox/Checkbox.txt",
+        "component": "Checkbox",
+        "slug": "checkbox",
+        "last_modified": "2026-04-15T15:37:01+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Chip",
+    "slug": "chip",
+    "path": "output/Chip",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION CHIP REACT DOC>",
+        "context": "Chip Component, used for displaying interactive elements that represent an input, attribute, or action.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Chip } from '@legion-ui-kit/react-core';\n\n<Chip color='primary' size='md' variant='solid'>Legion Chip</Chip>",
+        "attrs": "color (TChipColor); hoverable (boolean); size (TChipSize); variant (TChipVariant)",
+        "raw": "<LEGION CHIP REACT DOC>\n{\n\"context\": \"Chip Component, used for displaying interactive elements that represent an input, attribute, or action.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Chip } from '@legion-ui-kit/react-core';\\n\\n<Chip color='primary' size='md' variant='solid'>Legion Chip</Chip>\",\n\"attrs\": \"color (TChipColor); hoverable (boolean); size (TChipSize); variant (TChipVariant)\"\n}",
+        "file": "Chip.txt",
+        "path": "output/Chip/Chip.txt",
+        "component": "Chip",
+        "slug": "chip",
+        "last_modified": "2026-04-15T15:37:04+00:00"
+      }
+    ]
+  },
+  {
+    "name": "CustomSelect",
+    "slug": "customselect",
+    "path": "output/CustomSelect",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION CUSTOMSELECT REACT DOC>",
+        "context": "CustomSelect Component, used for creating a customizable select dropdown with options.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { CustomSelect } from '@legion-ui-kit/react-core';\n\n<CustomSelect multiple={true} placeholder='Select options'>\n  <CustomSelectOption value={1}>Option 1</CustomSelectOption>\n  <CustomSelectOption value={2}>Option 2</CustomSelectOption>\n</CustomSelect>",
+        "attrs": "multiple (boolean); placeholder (string); value (any); onChange (function); onFocus (function); onBlur (function); disabled (boolean); searchable (boolean); size (string); variant (string); label (string); hint (string); caption (string); className (string); style (object)",
+        "raw": "<LEGION CUSTOMSELECT REACT DOC>\n{\n\"context\": \"CustomSelect Component, used for creating a customizable select dropdown with options.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { CustomSelect } from '@legion-ui-kit/react-core';\\n\\n<CustomSelect multiple={true} placeholder='Select options'>\\n  <CustomSelectOption value={1}>Option 1</CustomSelectOption>\\n  <CustomSelectOption value={2}>Option 2</CustomSelectOption>\\n</CustomSelect>\",\n\"attrs\": \"multiple (boolean); placeholder (string); value (any); onChange (function); onFocus (function); onBlur (function); disabled (boolean); searchable (boolean); size (string); variant (string); label (string); hint (string); caption (string); className (string); style (object)\"\n}",
+        "file": "CustomSelect.txt",
+        "path": "output/CustomSelect/CustomSelect.txt",
+        "component": "CustomSelect",
+        "slug": "customselect",
+        "last_modified": "2026-04-15T15:37:08+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Divider",
+    "slug": "divider",
+    "path": "output/Divider",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION DIVIDER REACT DOC>",
+        "context": "Divider Component, used for visually separating content with optional labels and orientations.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Divider } from '@legion-ui-kit/react-core'; <Divider label='Legion Divider' orientation='horizontal' labelPosition='center' />",
+        "attrs": "label (ReactNode); labelPosition ('left' | 'center' | 'right'); orientation ('horizontal' | 'vertical'); lineType ('solid' | 'dashed' | 'dotted'); firstLineClassName (string); firstLineStyle (CSSProperties); secondLineClassName (string); secondLineStyle (CSSProperties);",
+        "raw": "<LEGION DIVIDER REACT DOC>\n{\n\"context\": \"Divider Component, used for visually separating content with optional labels and orientations.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Divider } from '@legion-ui-kit/react-core'; <Divider label='Legion Divider' orientation='horizontal' labelPosition='center' />\",\n\"attrs\": \"label (ReactNode); labelPosition ('left' | 'center' | 'right'); orientation ('horizontal' | 'vertical'); lineType ('solid' | 'dashed' | 'dotted'); firstLineClassName (string); firstLineStyle (CSSProperties); secondLineClassName (string); secondLineStyle (CSSProperties);\"\n}",
+        "file": "Divider.txt",
+        "path": "output/Divider/Divider.txt",
+        "component": "Divider",
+        "slug": "divider",
+        "last_modified": "2026-04-15T15:37:10+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Dropdown",
+    "slug": "dropdown",
+    "path": "output/Dropdown",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION DROPDOWN REACT DOC>",
+        "context": "Dropdown component, used for displaying a list of options or actions triggered by a user interaction.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Dropdown } from '@legion-ui-kit/react-core';\n\n<Dropdown trigger={<div>Click Me!</div>} position='bottom-left'>\n  Dropdown Content\n</Dropdown>",
+        "attrs": "dropdownDialogueClassName (string); dropdownDialogueStyle (CSSProperties); position (TDropdownPosition); trigger (JSX.Element)",
+        "raw": "<LEGION DROPDOWN REACT DOC>\n{\n\"context\": \"Dropdown component, used for displaying a list of options or actions triggered by a user interaction.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Dropdown } from '@legion-ui-kit/react-core';\\n\\n<Dropdown trigger={<div>Click Me!</div>} position='bottom-left'>\\n  Dropdown Content\\n</Dropdown>\",\n\"attrs\": \"dropdownDialogueClassName (string); dropdownDialogueStyle (CSSProperties); position (TDropdownPosition); trigger (JSX.Element)\"\n}",
+        "file": "Dropdown.txt",
+        "path": "output/Dropdown/Dropdown.txt",
+        "component": "Dropdown",
+        "slug": "dropdown",
+        "last_modified": "2026-04-15T15:37:13+00:00"
+      }
+    ]
+  },
+  {
+    "name": "FlexBox",
+    "slug": "flexbox",
+    "path": "output/FlexBox",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION FLEXBOX REACT DOC>",
+        "context": "FlexBox Component, used for creating flexible and responsive layouts using CSS Flexbox.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { FlexBox } from '@legion-ui-kit/react-core';\n\n<FlexBox direction='row' display='flex' alignItems='center' justifyContent='flexStart' columnGap='16px' rowGap='16px' wrap='wrap'>\n  <Card bordered style={{ padding: '4px 8px' }}>Item 1</Card>\n  <Card bordered style={{ padding: '4px 8px' }}>Item 2</Card>\n  <Card bordered style={{ padding: '4px 8px' }}>Item 3</Card>\n</FlexBox>",
+        "attrs": "alignContent (string); alignItems (string); columnGap (string); direction (string); display (string); justifyContent (string); rowGap (string); style (object); wrap (string)",
+        "raw": "<LEGION FLEXBOX REACT DOC>\n{\n\"context\": \"FlexBox Component, used for creating flexible and responsive layouts using CSS Flexbox.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { FlexBox } from '@legion-ui-kit/react-core';\\n\\n<FlexBox direction='row' display='flex' alignItems='center' justifyContent='flexStart' columnGap='16px' rowGap='16px' wrap='wrap'>\\n  <Card bordered style={{ padding: '4px 8px' }}>Item 1</Card>\\n  <Card bordered style={{ padding: '4px 8px' }}>Item 2</Card>\\n  <Card bordered style={{ padding: '4px 8px' }}>Item 3</Card>\\n</FlexBox>\",\n\"attrs\": \"alignContent (string); alignItems (string); columnGap (string); direction (string); display (string); justifyContent (string); rowGap (string); style (object); wrap (string)\"\n}",
+        "file": "FlexBox.txt",
+        "path": "output/FlexBox/FlexBox.txt",
+        "component": "FlexBox",
+        "slug": "flexbox",
+        "last_modified": "2026-04-15T15:37:17+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Icon",
+    "slug": "icon",
+    "path": "output/Icon",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION ICON REACT DOC>",
+        "context": "Icon component used for displaying various icons in the application.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Icon } from '@tabler/icons-react';\n\n<Icon icon='legion' color='primary' size='md' className='icon-class' />",
+        "attrs": "icon (TIconName); color (TIconColor); size (TIconSize); className (string)",
+        "raw": "<LEGION ICON REACT DOC>\n{\n\"context\": \"Icon component used for displaying various icons in the application.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Icon } from '@tabler/icons-react';\\n\\n<Icon icon='legion' color='primary' size='md' className='icon-class' />\",\n\"attrs\": \"icon (TIconName); color (TIconColor); size (TIconSize); className (string)\"\n}",
+        "file": "Icon.txt",
+        "path": "output/Icon/Icon.txt",
+        "component": "Icon",
+        "slug": "icon",
+        "last_modified": "2026-04-15T15:37:20+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Modal",
+    "slug": "modal",
+    "path": "output/Modal",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION MODAL REACT DOC>",
+        "context": "Modal Component, used for displaying content in an overlay that can be closed by the user.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Modal } from '@legion-ui-kit/react-core';\n\n<Modal isOpen={true} onClose={() => console.log('Modal closed')}>Modal Content</Modal>",
+        "attrs": "isOpen (boolean); noOverlayClose (boolean); onClose (() => void); overlayClassName (string); className (string)",
+        "raw": "<LEGION MODAL REACT DOC>\n{\n\"context\": \"Modal Component, used for displaying content in an overlay that can be closed by the user.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Modal } from '@legion-ui-kit/react-core';\\n\\n<Modal isOpen={true} onClose={() => console.log('Modal closed')}>Modal Content</Modal>\",\n\"attrs\": \"isOpen (boolean); noOverlayClose (boolean); onClose (() => void); overlayClassName (string); className (string)\"\n}",
+        "file": "Modal.txt",
+        "path": "output/Modal/Modal.txt",
+        "component": "Modal",
+        "slug": "modal",
+        "last_modified": "2026-04-15T15:37:23+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Navbar",
+    "slug": "navbar",
+    "path": "output/Navbar",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION NAVBAR REACT DOC>",
+        "context": "Navbar component, used for displaying a navigation bar with menu items and submenus.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Navbar } from '@legion-ui-kit/react-core'; <Navbar listMenu={[{menu: {label: 'Home'}}, {menu: {label: 'Longer Menu', isActive: true}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 3</p>, isActive: true}]}}, {menu: {label: 'Products'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Product 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Product 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Product 3</p>}]}, {menu: {label: 'Services'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Service 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Service 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Service 3</p>}]}, {menu: {label: 'About'}}]} />",
+        "attrs": "listMenu (TNavbarMenu[]); subMenuClassName (string); className (string); style (CSSProperties); onClick (function); onMouseEnter (function); onMouseLeave (function)",
+        "raw": "<LEGION NAVBAR REACT DOC>\n{\n\"context\": \"Navbar component, used for displaying a navigation bar with menu items and submenus.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Navbar } from '@legion-ui-kit/react-core'; <Navbar listMenu={[{menu: {label: 'Home'}}, {menu: {label: 'Longer Menu', isActive: true}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 3</p>, isActive: true}]}}, {menu: {label: 'Products'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Product 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Product 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Product 3</p>}]}, {menu: {label: 'Services'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Service 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Service 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Service 3</p>}]}, {menu: {label: 'About'}}]} />\",\n\"attrs\": \"listMenu (TNavbarMenu[]); subMenuClassName (string); className (string); style (CSSProperties); onClick (function); onMouseEnter (function); onMouseLeave (function)\"\n}",
+        "file": "Navbar.txt",
+        "path": "output/Navbar/Navbar.txt",
+        "component": "Navbar",
+        "slug": "navbar",
+        "last_modified": "2026-04-15T15:37:33+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Pagination",
+    "slug": "pagination",
+    "path": "output/Pagination",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION PAGINATION REACT DOC>",
+        "context": "Pagination Component, used for navigating through a set of pages in a user interface.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Pagination } from '@legion-ui-kit/react-core'; <Pagination activePage={1} totalPage={5} onClick={(page) => console.log(page)} />",
+        "attrs": "activePage (number); buttonClassName (string); buttonStyle (CSSProperties); onClick ((page: number) => void); totalPage (number)",
+        "raw": "<LEGION PAGINATION REACT DOC>\n{\n\"context\": \"Pagination Component, used for navigating through a set of pages in a user interface.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Pagination } from '@legion-ui-kit/react-core'; <Pagination activePage={1} totalPage={5} onClick={(page) => console.log(page)} />\",\n\"attrs\": \"activePage (number); buttonClassName (string); buttonStyle (CSSProperties); onClick ((page: number) => void); totalPage (number)\"\n}",
+        "file": "Pagination.txt",
+        "path": "output/Pagination/Pagination.txt",
+        "component": "Pagination",
+        "slug": "pagination",
+        "last_modified": "2026-04-15T15:37:36+00:00"
+      }
+    ]
+  },
+  {
+    "name": "ProgressBar",
+    "slug": "progressbar",
+    "path": "output/ProgressBar",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION PROGRESSBAR REACT DOC>",
+        "context": "ProgressBar Component, used for displaying a visual representation of progress in a task.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Progressbar } from '@legion-ui-kit/react-core';\n\n<Progressbar value={50} labelPosition='right' />",
+        "attrs": "className (string); indicatorClassName (string); indicatorStyle (CSSProperties); labelClassName (string); labelPosition (TProgressBarLabelPosition); labelText (string); labelStyle (CSSProperties); trackClassName (string); trackStyle (CSSProperties); value (number)",
+        "raw": "<LEGION PROGRESSBAR REACT DOC>\n{\n\"context\": \"ProgressBar Component, used for displaying a visual representation of progress in a task.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Progressbar } from '@legion-ui-kit/react-core';\\n\\n<Progressbar value={50} labelPosition='right' />\",\n\"attrs\": \"className (string); indicatorClassName (string); indicatorStyle (CSSProperties); labelClassName (string); labelPosition (TProgressBarLabelPosition); labelText (string); labelStyle (CSSProperties); trackClassName (string); trackStyle (CSSProperties); value (number)\"\n}",
+        "file": "ProgressBar.txt",
+        "path": "output/ProgressBar/ProgressBar.txt",
+        "component": "ProgressBar",
+        "slug": "progressbar",
+        "last_modified": "2026-04-15T15:37:39+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Radio",
+    "slug": "radio",
+    "path": "output/Radio",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION RADIO REACT DOC>",
+        "context": "Radio component, used for selecting one option from a set of options.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Radio } from '@legion-ui-kit/react-core';\n\n<Radio name='example' label='Radio Label' value='option1' size='md' labelPosition='right' defaultChecked={true} disabled={false} />",
+        "attrs": "block (boolean); inputClassName (string); inputStyle (CSSProperties); label (ReactNode); labelClassName (string); labelPosition ('left' | 'right'); labelStyle (CSSProperties); size ('sm' | 'md' | 'lg');",
+        "raw": "<LEGION RADIO REACT DOC>\n{\n\"context\": \"Radio component, used for selecting one option from a set of options.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Radio } from '@legion-ui-kit/react-core';\\n\\n<Radio name='example' label='Radio Label' value='option1' size='md' labelPosition='right' defaultChecked={true} disabled={false} />\",\n\"attrs\": \"block (boolean); inputClassName (string); inputStyle (CSSProperties); label (ReactNode); labelClassName (string); labelPosition ('left' | 'right'); labelStyle (CSSProperties); size ('sm' | 'md' | 'lg');\"\n}",
+        "file": "Radio.txt",
+        "path": "output/Radio/Radio.txt",
+        "component": "Radio",
+        "slug": "radio",
+        "last_modified": "2026-04-15T15:37:42+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Rating",
+    "slug": "rating",
+    "path": "output/Rating",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION RATING REACT DOC>",
+        "context": "Rating Component, used for displaying a rating system with customizable colors and values.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Rating } from '@legion-ui-kit/react-core'; <Rating activeColor='#FFD700' defaultColor='#C0C0C0' hoverColor='#FF4500' maxRating={5} value={3.5} onChange={(value) => console.log(value)} readonly={false} />",
+        "attrs": "activeColor (string); defaultColor (string); hoverColor (string); maxRating (number); onChange ((value: number) => void); readonly (boolean); starClassName (string); starStyle (CSSProperties); value (number)",
+        "raw": "<LEGION RATING REACT DOC>\n{\n\"context\": \"Rating Component, used for displaying a rating system with customizable colors and values.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Rating } from '@legion-ui-kit/react-core'; <Rating activeColor='#FFD700' defaultColor='#C0C0C0' hoverColor='#FF4500' maxRating={5} value={3.5} onChange={(value) => console.log(value)} readonly={false} />\",\n\"attrs\": \"activeColor (string); defaultColor (string); hoverColor (string); maxRating (number); onChange ((value: number) => void); readonly (boolean); starClassName (string); starStyle (CSSProperties); value (number)\"\n}",
+        "file": "Rating.txt",
+        "path": "output/Rating/Rating.txt",
+        "component": "Rating",
+        "slug": "rating",
+        "last_modified": "2026-04-15T15:37:45+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Select",
+    "slug": "select",
+    "path": "output/Select",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION SELECT REACT DOC>",
+        "context": "Select Component, used for selecting an option from a dropdown list.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Select } from '@legion-ui-kit/react-core'; <Select options={[{value: '1', label: 'Option 1'}, {value: '2', label: 'Option 2'}]} placeholder='Select an option' size='md' status='default' variant='outline' />",
+        "attrs": "options (TSelectOption[]); placeholder (string); size (TSelectSize); status (TSelectStatus); variant (TSelectVariant); multiple (boolean); disabled (boolean); label (ReactNode); hint (ReactNode); caption (ReactNode); noAnimation (boolean); block (boolean); searchValue (string); searchable (boolean); onChange (TSelectOnChangeSingleValue | TSelectOnChangeMultipleValue);",
+        "raw": "<LEGION SELECT REACT DOC>\n{\n\"context\": \"Select Component, used for selecting an option from a dropdown list.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Select } from '@legion-ui-kit/react-core'; <Select options={[{value: '1', label: 'Option 1'}, {value: '2', label: 'Option 2'}]} placeholder='Select an option' size='md' status='default' variant='outline' />\",\n\"attrs\": \"options (TSelectOption[]); placeholder (string); size (TSelectSize); status (TSelectStatus); variant (TSelectVariant); multiple (boolean); disabled (boolean); label (ReactNode); hint (ReactNode); caption (ReactNode); noAnimation (boolean); block (boolean); searchValue (string); searchable (boolean); onChange (TSelectOnChangeSingleValue | TSelectOnChangeMultipleValue);\"\n}",
+        "file": "Select.txt",
+        "path": "output/Select/Select.txt",
+        "component": "Select",
+        "slug": "select",
+        "last_modified": "2026-04-15T15:37:49+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Sidebar",
+    "slug": "sidebar",
+    "path": "output/Sidebar",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION SIDEBAR REACT DOC>",
+        "context": "Sidebar component, used for displaying a vertical navigation menu with collapsible sub-menus.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Sidebar } from '@legion-ui-kit/react-core';\n\n<Sidebar listMenu={[{menu: {label: 'Home'}}, {menu: {label: 'Longer Menu'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 3</p>, isActive: true}]}}, {menu: {label: 'Products'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Product 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Product 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Product 3</p>}]}, {menu: {label: 'Services'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Service 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Service 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Service 3</p>}]}, {menu: {label: 'About'}}]} />",
+        "attrs": "listMenu (TSidebarMenu[]); activeMainMenuClassName (string); activeMainMenuStyle (CSSProperties); activeSubMenuClassName (string); activeSubMenuStyle (CSSProperties); mainMenuWrapperClassName (string); mainMenuWrapperStyle (CSSProperties); mainMenuClassName (string); mainMenuStyle (CSSProperties); subMenuClassName (string); subMenuStyle (CSSProperties); subMenuWrapperClassName (string); subMenuWrapperStyle (CSSProperties)",
+        "raw": "<LEGION SIDEBAR REACT DOC>\n{\n\"context\": \"Sidebar component, used for displaying a vertical navigation menu with collapsible sub-menus.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Sidebar } from '@legion-ui-kit/react-core';\\n\\n<Sidebar listMenu={[{menu: {label: 'Home'}}, {menu: {label: 'Longer Menu'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Even Longer Menu 3</p>, isActive: true}]}}, {menu: {label: 'Products'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Product 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Product 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Product 3</p>}]}, {menu: {label: 'Services'}, subMenu: [{label: <p style={{ whiteSpace: 'nowrap' }}>Service 1</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Service 2</p>}, {label: <p style={{ whiteSpace: 'nowrap' }}>Service 3</p>}]}, {menu: {label: 'About'}}]} />\",\n\"attrs\": \"listMenu (TSidebarMenu[]); activeMainMenuClassName (string); activeMainMenuStyle (CSSProperties); activeSubMenuClassName (string); activeSubMenuStyle (CSSProperties); mainMenuWrapperClassName (string); mainMenuWrapperStyle (CSSProperties); mainMenuClassName (string); mainMenuStyle (CSSProperties); subMenuClassName (string); subMenuStyle (CSSProperties); subMenuWrapperClassName (string); subMenuWrapperStyle (CSSProperties)\"\n}",
+        "file": "Sidebar.txt",
+        "path": "output/Sidebar/Sidebar.txt",
+        "component": "Sidebar",
+        "slug": "sidebar",
+        "last_modified": "2026-04-15T15:37:55+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Snackbar",
+    "slug": "snackbar",
+    "path": "output/Snackbar",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION SNACKBAR REACT DOC>",
+        "context": "Snackbar component, used for displaying brief messages at the bottom or top of the screen.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Snackbar } from '@legion-ui-kit/react-core';\n\n<Snackbar title='Snackbar Title' description='Legion Snackbar description goes here' isShow={true} position='top' />",
+        "attrs": "title (ReactNode); description (ReactNode); isShow (boolean); position ('top' | 'bottom'); animationDuration (number); leftIcon (ReactNode); rightIcon (ReactNode); className (string); descriptionClassName (string); titleClassName (string); leftIconClassName (string); rightIconClassName (string); descriptionStyle (CSSProperties); titleStyle (CSSProperties); leftIconStyle (CSSProperties); rightIconStyle (CSSProperties)",
+        "raw": "<LEGION SNACKBAR REACT DOC>\n{\n\"context\": \"Snackbar component, used for displaying brief messages at the bottom or top of the screen.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Snackbar } from '@legion-ui-kit/react-core';\\n\\n<Snackbar title='Snackbar Title' description='Legion Snackbar description goes here' isShow={true} position='top' />\",\n\"attrs\": \"title (ReactNode); description (ReactNode); isShow (boolean); position ('top' | 'bottom'); animationDuration (number); leftIcon (ReactNode); rightIcon (ReactNode); className (string); descriptionClassName (string); titleClassName (string); leftIconClassName (string); rightIconClassName (string); descriptionStyle (CSSProperties); titleStyle (CSSProperties); leftIconStyle (CSSProperties); rightIconStyle (CSSProperties)\"\n}",
+        "file": "Snackbar.txt",
+        "path": "output/Snackbar/Snackbar.txt",
+        "component": "Snackbar",
+        "slug": "snackbar",
+        "last_modified": "2026-04-15T15:37:59+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Spinner",
+    "slug": "spinner",
+    "path": "output/Spinner",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION SPINNER REACT DOC>",
+        "context": "Spinner Component, used for displaying a loading indicator in various sizes.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Spinner } from '@legion-ui-kit/react-core';\n\n<Spinner size='md' indicatorClassName='custom-indicator' trackClassName='custom-track' />",
+        "attrs": "indicatorClassName (string); size ('sm' | 'md' | 'lg'); trackClassName (string); indicatorStyle (Omit<SVGProps<SVGElement>, 'ref'>); trackStyle (Omit<SVGProps<SVGElement>, 'ref'>)",
+        "raw": "<LEGION SPINNER REACT DOC>\n{\n\"context\": \"Spinner Component, used for displaying a loading indicator in various sizes.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Spinner } from '@legion-ui-kit/react-core';\\n\\n<Spinner size='md' indicatorClassName='custom-indicator' trackClassName='custom-track' />\",\n\"attrs\": \"indicatorClassName (string); size ('sm' | 'md' | 'lg'); trackClassName (string); indicatorStyle (Omit<SVGProps<SVGElement>, 'ref'>); trackStyle (Omit<SVGProps<SVGElement>, 'ref'>)\"\n}",
+        "file": "Spinner.txt",
+        "path": "output/Spinner/Spinner.txt",
+        "component": "Spinner",
+        "slug": "spinner",
+        "last_modified": "2026-04-15T15:38:02+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Stepper",
+    "slug": "stepper",
+    "path": "output/Stepper",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION STEPPER REACT DOC>",
+        "context": "Stepper Component, used for displaying a sequence of steps for a process or workflow.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Step, Stepper } from '@legion-ui-kit/react-core';\n\n<Stepper activeStep={0} orientation='horizontal' textPosition='bottom'>\n  <Step title='Step 1' description='Description of step 1' indicator='1' />\n  <Step title='Step 2' description='Description of step 2' indicator='2' />\n  <Step title='Step 3' description='Description of step 3' indicator='3' />\n</Stepper>",
+        "attrs": "activeStep (number); children (ReactNode); descriptionClassName (string); descriptionStyle (CSSProperties); indicatorClassName (string); indicatorStyle (CSSProperties); labelClassName (string); labelStyle (CSSProperties); onChange ((step?: number) => void); orientation ('horizontal' | 'vertical'); stepClassName (string); stepStyle (CSSProperties); textPosition ('top' | 'bottom' | 'left' | 'right'); titleClassName (string); titleStyle (CSSProperties)",
+        "raw": "<LEGION STEPPER REACT DOC>\n{\n\"context\": \"Stepper Component, used for displaying a sequence of steps for a process or workflow.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Step, Stepper } from '@legion-ui-kit/react-core';\\n\\n<Stepper activeStep={0} orientation='horizontal' textPosition='bottom'>\\n  <Step title='Step 1' description='Description of step 1' indicator='1' />\\n  <Step title='Step 2' description='Description of step 2' indicator='2' />\\n  <Step title='Step 3' description='Description of step 3' indicator='3' />\\n</Stepper>\",\n\"attrs\": \"activeStep (number); children (ReactNode); descriptionClassName (string); descriptionStyle (CSSProperties); indicatorClassName (string); indicatorStyle (CSSProperties); labelClassName (string); labelStyle (CSSProperties); onChange ((step?: number) => void); orientation ('horizontal' | 'vertical'); stepClassName (string); stepStyle (CSSProperties); textPosition ('top' | 'bottom' | 'left' | 'right'); titleClassName (string); titleStyle (CSSProperties)\"\n}",
+        "file": "Stepper.txt",
+        "path": "output/Stepper/Stepper.txt",
+        "component": "Stepper",
+        "slug": "stepper",
+        "last_modified": "2026-04-15T15:38:07+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Switch",
+    "slug": "switch",
+    "path": "output/Switch",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION SWITCH REACT DOC>",
+        "context": "Switch Component, used for toggling between two states, such as on/off or yes/no.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Switch } from '@legion-ui-kit/react-core';\n\n<Switch label='Switch Label' size='md' type='multiple' defaultChecked={true} disabled={false} labelPosition='right' />",
+        "attrs": "disabled (boolean); fieldClassName (string); fieldStyle (CSSProperties); inputClassName (string); inputStyle (CSSProperties); label (ReactNode); labelClassName (string); labelPosition ('left' | 'right'); labelStyle (CSSProperties); size ('sm' | 'md' | 'lg'); toggleClassName (string); toggleStyle (CSSProperties); type ('single' | 'multiple')",
+        "raw": "<LEGION SWITCH REACT DOC>\n{\n\"context\": \"Switch Component, used for toggling between two states, such as on/off or yes/no.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Switch } from '@legion-ui-kit/react-core';\\n\\n<Switch label='Switch Label' size='md' type='multiple' defaultChecked={true} disabled={false} labelPosition='right' />\",\n\"attrs\": \"disabled (boolean); fieldClassName (string); fieldStyle (CSSProperties); inputClassName (string); inputStyle (CSSProperties); label (ReactNode); labelClassName (string); labelPosition ('left' | 'right'); labelStyle (CSSProperties); size ('sm' | 'md' | 'lg'); toggleClassName (string); toggleStyle (CSSProperties); type ('single' | 'multiple')\"\n}",
+        "file": "Switch.txt",
+        "path": "output/Switch/Switch.txt",
+        "component": "Switch",
+        "slug": "switch",
+        "last_modified": "2026-04-15T15:38:10+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Table",
+    "slug": "table",
+    "path": "output/Table",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION TABLE REACT DOC>",
+        "context": "Table component, used for displaying tabular data with customizable styles and behaviors.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Table } from '@legion-ui-kit/react-core';\n\n<Table borderCell='column' hoverable striped>\n  <thead>\n    <tr>\n      <th>Header 1</th>\n      <th>Header 2</th>\n      <th>Header 3</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Row 1</td>\n      <td>Row 1</td>\n      <td>Row 1</td>\n    </tr>\n    <tr>\n      <td>Row 2</td>\n      <td>Row 2</td>\n      <td>Row 2</td>\n    </tr>\n    <tr>\n      <td>Row 3</td>\n      <td>Row 3</td>\n      <td>Row 3</td>\n    </tr>\n  </tbody>\n</Table>",
+        "attrs": "borderCell ('none' | 'column' | 'row' | 'both'); hoverable (boolean); striped (boolean); className (string)",
+        "raw": "<LEGION TABLE REACT DOC>\n{\n\"context\": \"Table component, used for displaying tabular data with customizable styles and behaviors.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Table } from '@legion-ui-kit/react-core';\\n\\n<Table borderCell='column' hoverable striped>\\n  <thead>\\n    <tr>\\n      <th>Header 1</th>\\n      <th>Header 2</th>\\n      <th>Header 3</th>\\n    </tr>\\n  </thead>\\n  <tbody>\\n    <tr>\\n      <td>Row 1</td>\\n      <td>Row 1</td>\\n      <td>Row 1</td>\\n    </tr>\\n    <tr>\\n      <td>Row 2</td>\\n      <td>Row 2</td>\\n      <td>Row 2</td>\\n    </tr>\\n    <tr>\\n      <td>Row 3</td>\\n      <td>Row 3</td>\\n      <td>Row 3</td>\\n    </tr>\\n  </tbody>\\n</Table>\",\n\"attrs\": \"borderCell ('none' | 'column' | 'row' | 'both'); hoverable (boolean); striped (boolean); className (string)\"\n}",
+        "file": "Table.txt",
+        "path": "output/Table/Table.txt",
+        "component": "Table",
+        "slug": "table",
+        "last_modified": "2026-04-15T15:38:15+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Tabs",
+    "slug": "tabs",
+    "path": "output/Tabs",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION TABS REACT DOC>",
+        "context": "Tabs component, used for displaying a set of tabbed content where only one tab can be active at a time.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Tabs, TabList, Tab, TabPanel } from '@legion-ui-kit/react-core';\n\n<Tabs activeTab={0} onChange={(index) => console.log(index)} position='top'>\n  <TabList>\n    <Tab>Tab 1</Tab>\n    <Tab>Tab 2</Tab>\n    <Tab>Tab 3</Tab>\n  </TabList>\n  <TabPanel>Content for Tab 1</TabPanel>\n  <TabPanel>Content for Tab 2</TabPanel>\n  <TabPanel>Content for Tab 3</TabPanel>\n</Tabs>",
+        "attrs": "activeTab (number); onChange (function); position ('top' | 'bottom' | 'left' | 'right'); className (string)",
+        "raw": "<LEGION TABS REACT DOC>\n{\n\"context\": \"Tabs component, used for displaying a set of tabbed content where only one tab can be active at a time.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Tabs, TabList, Tab, TabPanel } from '@legion-ui-kit/react-core';\\n\\n<Tabs activeTab={0} onChange={(index) => console.log(index)} position='top'>\\n  <TabList>\\n    <Tab>Tab 1</Tab>\\n    <Tab>Tab 2</Tab>\\n    <Tab>Tab 3</Tab>\\n  </TabList>\\n  <TabPanel>Content for Tab 1</TabPanel>\\n  <TabPanel>Content for Tab 2</TabPanel>\\n  <TabPanel>Content for Tab 3</TabPanel>\\n</Tabs>\",\n\"attrs\": \"activeTab (number); onChange (function); position ('top' | 'bottom' | 'left' | 'right'); className (string)\"\n}",
+        "file": "Tabs.txt",
+        "path": "output/Tabs/Tabs.txt",
+        "component": "Tabs",
+        "slug": "tabs",
+        "last_modified": "2026-04-15T15:38:20+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Text",
+    "slug": "text",
+    "path": "output/Text",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION TEXT REACT DOC>",
+        "context": "Text component, used for displaying text with various styles and sizes.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Text } from '@legion-ui-kit/react-core';\n\n<Text as='h1' color='primary' fontType='heading' size='h1'>The quick brown fox jumps over the lazy dog</Text>",
+        "attrs": "as (TTextAs); color (TTextColor | CSSProperties['color']); fontType (TTextFontType); size (TTextSize); weight (CSSProperties['fontWeight'])",
+        "raw": "<LEGION TEXT REACT DOC>\n{\n\"context\": \"Text component, used for displaying text with various styles and sizes.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Text } from '@legion-ui-kit/react-core';\\n\\n<Text as='h1' color='primary' fontType='heading' size='h1'>The quick brown fox jumps over the lazy dog</Text>\",\n\"attrs\": \"as (TTextAs); color (TTextColor | CSSProperties['color']); fontType (TTextFontType); size (TTextSize); weight (CSSProperties['fontWeight'])\"\n}",
+        "file": "Text.txt",
+        "path": "output/Text/Text.txt",
+        "component": "Text",
+        "slug": "text",
+        "last_modified": "2026-04-15T15:38:23+00:00"
+      }
+    ]
+  },
+  {
+    "name": "TextArea",
+    "slug": "textarea",
+    "path": "output/TextArea",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION TEXTAREA REACT DOC>",
+        "context": "TextArea Component, used for capturing multi-line text input from users.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { TextArea } from '@legion-ui-kit/react-core';\n\n<TextArea\n  size='md'\n  status='default'\n  variant='outline'\n  placeholder='Input placeholder...'\n  label='Input Label'\n  hint='Input Hint'\n  caption='Input Caption'\n/>",
+        "attrs": "block (boolean); caption (ReactNode); captionClassName (string); captionStyle (CSSProperties); className (string); disabled (boolean); hint (ReactNode); hintClassName (string); hintStyle (CSSProperties); id (string); inputClassName (string); inputStyle (CSSProperties); inputWrapperClassName (string); inputWrapperStyle (CSSProperties); label (ReactNode); labelClassName (string); labelStyle (CSSProperties); noAnimation (boolean); placeholder (string); readOnly (boolean); size (TTextAreaSize); status (TTextAreaStatus); variant (TTextAreaVariant)",
+        "raw": "<LEGION TEXTAREA REACT DOC>\n{\n\"context\": \"TextArea Component, used for capturing multi-line text input from users.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { TextArea } from '@legion-ui-kit/react-core';\\n\\n<TextArea\\n  size='md'\\n  status='default'\\n  variant='outline'\\n  placeholder='Input placeholder...'\\n  label='Input Label'\\n  hint='Input Hint'\\n  caption='Input Caption'\\n/>\",\n\"attrs\": \"block (boolean); caption (ReactNode); captionClassName (string); captionStyle (CSSProperties); className (string); disabled (boolean); hint (ReactNode); hintClassName (string); hintStyle (CSSProperties); id (string); inputClassName (string); inputStyle (CSSProperties); inputWrapperClassName (string); inputWrapperStyle (CSSProperties); label (ReactNode); labelClassName (string); labelStyle (CSSProperties); noAnimation (boolean); placeholder (string); readOnly (boolean); size (TTextAreaSize); status (TTextAreaStatus); variant (TTextAreaVariant)\"\n}",
+        "file": "TextArea.txt",
+        "path": "output/TextArea/TextArea.txt",
+        "component": "TextArea",
+        "slug": "textarea",
+        "last_modified": "2026-04-15T15:41:14+00:00"
+      }
+    ]
+  },
+  {
+    "name": "TextField",
+    "slug": "textfield",
+    "path": "output/TextField",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION TEXTFIELD REACT DOC>",
+        "context": "TextField Component, used for input fields with various configurations including size, status, and variant.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { TextField } from '@legion-ui-kit/react-core';\n\n<TextField\n  label='Your Label'\n  placeholder='Enter text...'\n  size='md'\n  status='default'\n  variant='outline'\n  iconLeft={<IconMail />}\n  iconRight={<IconSearch />}\n  prefix='Prefix'\n  suffix='Suffix'\n  caption='This is a caption'\n  hint='This is a hint'\n  disabled={false}\n  readOnly={false}\n/>",
+        "attrs": "block (boolean); caption (ReactNode); captionClassName (string); captionStyle (CSSProperties); disabled (boolean); hint (ReactNode); hintClassName (string); hintStyle (CSSProperties); iconLeft (ReactNode); iconLeftClassName (string); iconLeftStyle (CSSProperties); iconRight (ReactNode); iconRightClassName (string); iconRightStyle (CSSProperties); inputClassName (string); inputStyle (CSSProperties); inputWrapperClassName (string); inputWrapperStyle (CSSProperties); label (ReactNode); labelClassName (string); labelStyle (CSSProperties); noAnimation (boolean); placeholder (string); prefix (ReactNode); prefixClassName (string); prefixStyle (CSSProperties); readOnly (boolean); size (TTextFieldSize); status (TTextFieldStatus); suffix (ReactNode); suffixClassName (string); suffixStyle (CSSProperties); variant (TTextFieldVariant)",
+        "raw": "<LEGION TEXTFIELD REACT DOC>\n{\n\"context\": \"TextField Component, used for input fields with various configurations including size, status, and variant.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { TextField } from '@legion-ui-kit/react-core';\\n\\n<TextField\\n  label='Your Label'\\n  placeholder='Enter text...'\\n  size='md'\\n  status='default'\\n  variant='outline'\\n  iconLeft={<IconMail />}\\n  iconRight={<IconSearch />}\\n  prefix='Prefix'\\n  suffix='Suffix'\\n  caption='This is a caption'\\n  hint='This is a hint'\\n  disabled={false}\\n  readOnly={false}\\n/>\",\n\"attrs\": \"block (boolean); caption (ReactNode); captionClassName (string); captionStyle (CSSProperties); disabled (boolean); hint (ReactNode); hintClassName (string); hintStyle (CSSProperties); iconLeft (ReactNode); iconLeftClassName (string); iconLeftStyle (CSSProperties); iconRight (ReactNode); iconRightClassName (string); iconRightStyle (CSSProperties); inputClassName (string); inputStyle (CSSProperties); inputWrapperClassName (string); inputWrapperStyle (CSSProperties); label (ReactNode); labelClassName (string); labelStyle (CSSProperties); noAnimation (boolean); placeholder (string); prefix (ReactNode); prefixClassName (string); prefixStyle (CSSProperties); readOnly (boolean); size (TTextFieldSize); status (TTextFieldStatus); suffix (ReactNode); suffixClassName (string); suffixStyle (CSSProperties); variant (TTextFieldVariant)\"\n}",
+        "file": "TextField.txt",
+        "path": "output/TextField/TextField.txt",
+        "component": "TextField",
+        "slug": "textfield",
+        "last_modified": "2026-04-15T15:41:19+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Tooltip",
+    "slug": "tooltip",
+    "path": "output/Tooltip",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION TOOLTIP REACT DOC>",
+        "context": "Tooltip Component, used for displaying informative text when a user hovers over an element.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Tooltip } from '@legion-ui-kit/react-core'; <Tooltip content='Tooltip content'><div style={{ display: 'inline-block' }}>Hover me</div></Tooltip>",
+        "attrs": "children (JSX.Element); content (ReactNode); className (string); noArrow (boolean); position (TTipPosition); style (CSSProperties)",
+        "raw": "<LEGION TOOLTIP REACT DOC>\n{\n\"context\": \"Tooltip Component, used for displaying informative text when a user hovers over an element.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Tooltip } from '@legion-ui-kit/react-core'; <Tooltip content='Tooltip content'><div style={{ display: 'inline-block' }}>Hover me</div></Tooltip>\",\n\"attrs\": \"children (JSX.Element); content (ReactNode); className (string); noArrow (boolean); position (TTipPosition); style (CSSProperties)\"\n}",
+        "file": "Tooltip.txt",
+        "path": "output/Tooltip/Tooltip.txt",
+        "component": "Tooltip",
+        "slug": "tooltip",
+        "last_modified": "2026-04-15T15:41:22+00:00"
+      }
+    ]
+  },
+  {
+    "name": "image",
+    "slug": "image",
+    "path": "output/image",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION IMAGE REACT DOC>",
+        "context": "Image Component, used for displaying images with customizable object fit and loading behavior.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Image } from '@legion-ui-kit/react-core'; <Image src='image.jpg' alt='Description' fit='cover' loading='lazy' className='custom-class' />",
+        "attrs": "src (string); alt (string); fit ('fill' | 'contain' | 'cover' | 'none' | 'scale-down); loading ('lazy' | 'eager'); className (string)",
+        "raw": "<LEGION IMAGE REACT DOC>\n{\n\"context\": \"Image Component, used for displaying images with customizable object fit and loading behavior.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Image } from '@legion-ui-kit/react-core'; <Image src='image.jpg' alt='Description' fit='cover' loading='lazy' className='custom-class' />\",\n\"attrs\": \"src (string); alt (string); fit ('fill' | 'contain' | 'cover' | 'none' | 'scale-down); loading ('lazy' | 'eager'); className (string)\"\n}",
+        "file": "image.txt",
+        "path": "output/image/image.txt",
+        "component": "image",
+        "slug": "image",
+        "last_modified": "2026-04-15T15:41:24+00:00"
+      }
+    ]
+  },
+  {
+    "name": "pin-input",
+    "slug": "pin-input",
+    "path": "output/pin-input",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION PIN-INPUT REACT DOC>",
+        "context": "Pin Input Component, used for entering a numeric or alphanumeric PIN in a segmented input format.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { PinInput } from '@legion-ui-kit/react-core'; <PinInput value='1234' onChange={(value) => console.log(value)} size='md' variant='outline' status='normal' valueLength={4} className='custom-class' />",
+        "attrs": "value (string); onChange (function); size ('sm' | 'md' | 'lg'); variant ('outline' | 'inline'); status ('normal' | 'error' | 'success'); valueLength (number); className (string)",
+        "raw": "<LEGION PIN-INPUT REACT DOC>\n{\n\"context\": \"Pin Input Component, used for entering a numeric or alphanumeric PIN in a segmented input format.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { PinInput } from '@legion-ui-kit/react-core'; <PinInput value='1234' onChange={(value) => console.log(value)} size='md' variant='outline' status='normal' valueLength={4} className='custom-class' />\",\n\"attrs\": \"value (string); onChange (function); size ('sm' | 'md' | 'lg'); variant ('outline' | 'inline'); status ('normal' | 'error' | 'success'); valueLength (number); className (string)\"\n}",
+        "file": "pin-input.txt",
+        "path": "output/pin-input/pin-input.txt",
+        "component": "pin-input",
+        "slug": "pin-input",
+        "last_modified": "2026-04-15T15:41:27+00:00"
+      }
+    ]
+  },
+  {
+    "name": "slider",
+    "slug": "slider",
+    "path": "output/slider",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION SLIDER REACT DOC>",
+        "context": "Slider Component, used for selecting a range of values with two handles.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Slider } from '@legion-ui-kit/react-core'; <Slider min={0} max={100} step={1} value={{min: 20, max: 80}} onChange={({ min, max }) => console.log(min, max)} showText={true} variant='plain' className='custom-slider' />",
+        "attrs": "min (number); max (number); step (number); onChange (({ min: number; max: number }) => void); showText (boolean); value ({ min: number; max: number }); variant ('plain' | 'box'); className (string)",
+        "raw": "<LEGION SLIDER REACT DOC>\n{\n\"context\": \"Slider Component, used for selecting a range of values with two handles.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Slider } from '@legion-ui-kit/react-core'; <Slider min={0} max={100} step={1} value={{min: 20, max: 80}} onChange={({ min, max }) => console.log(min, max)} showText={true} variant='plain' className='custom-slider' />\",\n\"attrs\": \"min (number); max (number); step (number); onChange (({ min: number; max: number }) => void); showText (boolean); value ({ min: number; max: number }); variant ('plain' | 'box'); className (string)\"\n}",
+        "file": "slider.txt",
+        "path": "output/slider/slider.txt",
+        "component": "slider",
+        "slug": "slider",
+        "last_modified": "2026-04-15T15:41:31+00:00"
+      }
+    ]
+  },
+  {
+    "name": "tree",
+    "slug": "tree",
+    "path": "output/tree",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION TREE REACT DOC>",
+        "context": "Tree Component, used for displaying hierarchical data in a collapsible format.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css';\nimport '@legion-ui-kit/react-core/styles/legion.css';\nimport { Tree } from '@legion-ui-kit/react-core';\n\n<Tree items={[{title: 'Parent', childrens: [{title: 'Child 1'}, {title: 'Child 2'}]}]} className='custom-class' iconShow={<IconPlus />} iconHide={<IconMinus />} />",
+        "attrs": "items (TreeNodeProps[]); iconShow (ReactNode); iconHide (ReactNode); className (string);",
+        "raw": "<LEGION TREE REACT DOC>\n{\n\"context\": \"Tree Component, used for displaying hierarchical data in a collapsible format.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css';\\nimport '@legion-ui-kit/react-core/styles/legion.css';\\nimport { Tree } from '@legion-ui-kit/react-core';\\n\\n<Tree items={[{title: 'Parent', childrens: [{title: 'Child 1'}, {title: 'Child 2'}]}]} className='custom-class' iconShow={<IconPlus />} iconHide={<IconMinus />} />\",\n\"attrs\": \"items (TreeNodeProps[]); iconShow (ReactNode); iconHide (ReactNode); className (string);\"\n}",
+        "file": "tree.txt",
+        "path": "output/tree/tree.txt",
+        "component": "tree",
+        "slug": "tree",
+        "last_modified": "2026-04-15T15:41:35+00:00"
+      }
+    ]
+  },
+  {
+    "name": "upload",
+    "slug": "upload",
+    "path": "output/upload",
+    "document_count": 1,
+    "documents": [
+      {
+        "title": "<LEGION UPLOAD REACT DOC>",
+        "context": "Upload Component, used for allowing users to upload files through drag-and-drop or file selection.",
+        "usage": "import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Upload } from '@legion-ui-kit/react-core'; <Upload onUpload={(files) => console.log(files)} description='Upload your files' percent={50} disabled={false} uploading={false} label='Select Document' title='Drag and drop your files here' variant='information' />",
+        "attrs": "onUpload: (files: FileList) => void; description?: string; disabled?: boolean; label?: string; percent?: number; title?: string; uploading?: boolean; variant?: 'information' | 'success' | 'error'; className?: string;",
+        "raw": "<LEGION UPLOAD REACT DOC>\n{\n\"context\": \"Upload Component, used for allowing users to upload files through drag-and-drop or file selection.\",\n\"usage\": \"import '@legion-ui-kit/react-core/styles/core-styles.css'; import '@legion-ui-kit/react-core/styles/legion.css'; import { Upload } from '@legion-ui-kit/react-core'; <Upload onUpload={(files) => console.log(files)} description='Upload your files' percent={50} disabled={false} uploading={false} label='Select Document' title='Drag and drop your files here' variant='information' />\",\n\"attrs\": \"onUpload: (files: FileList) => void; description?: string; disabled?: boolean; label?: string; percent?: number; title?: string; uploading?: boolean; variant?: 'information' | 'success' | 'error'; className?: string;\"\n}",
+        "file": "upload.txt",
+        "path": "output/upload/upload.txt",
+        "component": "upload",
+        "slug": "upload",
+        "last_modified": "2026-04-15T15:41:39+00:00"
+      }
+    ]
+  }
+]

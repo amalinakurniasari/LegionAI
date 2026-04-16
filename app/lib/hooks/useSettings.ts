@@ -15,6 +15,8 @@ import {
   updateContextOptimization,
   updateEventLogs,
   updatePromptId,
+  legionComponentStore,
+  updateLegionComponent,
 } from '~/lib/stores/settings';
 import { useCallback, useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
@@ -58,6 +60,8 @@ export interface UseSettingsReturn {
   setAutoSelectTemplate: (enabled: boolean) => void;
   contextOptimizationEnabled: boolean;
   enableContextOptimization: (enabled: boolean) => void;
+  legionComponentEnabled: boolean;
+  enableLegionComponent: (enabled: boolean) => void;
 
   // Tab configuration
   tabConfiguration: TabWindowConfig;
@@ -78,6 +82,7 @@ export function useSettings(): UseSettingsReturn {
   const autoSelectTemplate = useStore(autoSelectStarterTemplate);
   const [activeProviders, setActiveProviders] = useState<ProviderInfo[]>([]);
   const contextOptimizationEnabled = useStore(enableContextOptimizationStore);
+  const legionComponentEnabled = useStore(legionComponentStore);
   const tabConfiguration = useStore(tabConfigurationStore);
   const [settings, setSettings] = useState<Settings>(() => {
     const storedSettings = getLocalStorage('settings');
@@ -143,6 +148,11 @@ export function useSettings(): UseSettingsReturn {
     logStore.logSystem(`Context optimization ${enabled ? 'enabled' : 'disabled'}`);
   }, []);
 
+  const enableLegionComponent = useCallback((enabled: boolean) => {
+    updateLegionComponent(enabled);
+    logStore.logSystem(`Legion AI Component ${enabled ? 'enabled' : 'disabled'}`);
+  }, []);
+
   const setTheme = useCallback(
     (theme: Settings['theme']) => {
       saveSettings({ theme });
@@ -197,6 +207,8 @@ export function useSettings(): UseSettingsReturn {
     setAutoSelectTemplate,
     contextOptimizationEnabled,
     enableContextOptimization,
+    legionComponentEnabled,
+    enableLegionComponent,
     setTheme,
     setLanguage,
     setNotifications,

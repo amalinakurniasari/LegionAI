@@ -117,6 +117,8 @@ export default function FeaturesTab() {
     setEventLogs,
     setPromptId,
     promptId,
+    legionComponentEnabled,
+    enableLegionComponent,
   } = useSettings();
 
   // Enable features by default on first load
@@ -140,6 +142,10 @@ export default function FeaturesTab() {
 
     if (eventLogs === undefined) {
       setEventLogs(true); // Default: ON - Enable event logging
+    }
+
+    if (legionComponentEnabled === undefined) {
+      enableLegionComponent(false); // Default: OFF - Disable Legion component prepend
     }
   }, []); // Only run once on component mount
 
@@ -170,11 +176,17 @@ export default function FeaturesTab() {
           break;
         }
 
+        case 'legionComponent': {
+          enableLegionComponent(enabled);
+          toast.success(`Legion AI Component docs ${enabled ? 'enabled' : 'disabled'}`);
+          break;
+        }
+
         default:
           break;
       }
     },
-    [enableLatestBranch, setAutoSelectTemplate, enableContextOptimization, setEventLogs],
+    [enableLatestBranch, setAutoSelectTemplate, enableContextOptimization, setEventLogs, enableLegionComponent],
   );
 
   const features = {
@@ -210,6 +222,14 @@ export default function FeaturesTab() {
         icon: 'i-ph:list-bullets',
         enabled: eventLogs,
         tooltip: 'Enabled by default to record detailed logs of system events and user actions',
+      },
+      {
+        id: 'legionComponent',
+        title: 'Legion UI Component Docs',
+        description: 'Prepend Legion UI component documentation to prompts',
+        icon: 'i-ph:package',
+        enabled: legionComponentEnabled,
+        tooltip: 'When enabled, Legion UI component documentation will be automatically added to your prompts for better UI component suggestions',
       },
     ],
     beta: [],

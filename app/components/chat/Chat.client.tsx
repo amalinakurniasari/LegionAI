@@ -28,6 +28,7 @@ import type { ElementInfo } from '~/components/workbench/Inspector';
 import type { TextUIPart, FileUIPart, Attachment } from '@ai-sdk/ui-utils';
 import { useMCPStore } from '~/lib/stores/mcp';
 import type { LlmErrorAlertType } from '~/types/actions';
+import { getLegionComponentDocs } from '~/lib/common/prompts/legion-component-loader';
 
 const toastAnimation = cssTransition({
   enter: 'animated fadeInRight',
@@ -133,7 +134,7 @@ export const ChatImpl = memo(
       (project) => project.id === supabaseConn.selectedProjectId,
     );
     const supabaseAlert = useStore(workbenchStore.supabaseAlert);
-    const { activeProviders, promptId, autoSelectTemplate, contextOptimizationEnabled } = useSettings();
+    const { activeProviders, promptId, autoSelectTemplate, contextOptimizationEnabled, legionComponentEnabled } = useSettings();
     const [llmErrorAlert, setLlmErrorAlert] = useState<LlmErrorAlertType | undefined>(undefined);
     const [model, setModel] = useState(() => {
       const savedModel = Cookies.get('selectedModel');
@@ -444,7 +445,11 @@ export const ChatImpl = memo(
         const elementInfo = `<div class=\"__boltSelectedElement__\" data-element='${JSON.stringify(selectedElement)}'>${JSON.stringify(`${selectedElement.displayText}`)}</div>`;
         finalMessageContent = messageContent + elementInfo;
       }
-
+      
+      if (legionComponentEnabled) {
+        const legionDocs = getLegionComponentDocs();
+        finalMessageContent = `${legionDocs}\n\n---\n\n${finalMessageContent}`;
+      }
       runAnimation();
 
       if (!chatStarted) {
